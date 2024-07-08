@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Herzlichen Glückwunsch!</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/last.css" />
+  </head>
+  <body>
+    <header class="header">
+        <a href="/Webseite_1.html" class="logo">Quiz</a>
+        
+        <nav class="navbar">
+            <a href="/html/quiz.html">
+                <img src="/icons/quiz.png" alt="Zum Quiz" class="nav-icon">
+                <span>Zum Quiz</span>
+            </a>
+            <a href="/html/abzeichen.html">
+                <img src="/icons/abzeichen.png" alt="Zu den Abzeichen" class="nav-icon">
+                <span>Zu den Abzeichen</span>
+            </a>
+            <a href="/html/rangliste.html">
+                <img src="/icons/rangliste.png" alt="Zur Rangliste" class="nav-icon">
+                <span>Zur Rangliste</span>
+            </a>
+        </nav>
+        <div class="burger-menu">
+            <div class="burger"></div>
+        </div>
+    </header>
+
+    <div class="container">
+      <div id="end" class="flex-center flex-column">
+        <img src="" alt="Abzeichen" id="badgeImage" />
+        <h1 id="congratulations">Herzlichen Glückwunsch!</h1>
+        <h2 id="finalScore"></h2>
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Benutzername"/>
+          <button
+            type="submit"
+            class="btn"
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+            disabled
+          >
+            Ergebnis speichern
+          </button>
+        </form>
+        <a class="btn" href="../html/quiz.html">Spiel nochmal</a>
+        <a class="btn" href="../index.html">Zurück zur Startseite</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
+        </div>
+    </footer>
+
+    <audio id="badgeSound" src="../audio/success-fanfare-trumpets-6185.mp3"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="../js/last.js"></script>
+  </body>
+</html>

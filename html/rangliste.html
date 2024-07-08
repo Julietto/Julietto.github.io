@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rangliste</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/rangliste.css" />
+  </head>
+  <body>
+    <main class="main">
+      <header class="header">
+          <a href="/Webseite_1.html" class="logo">Quiz</a>
+          
+          <nav class="navbar">
+              <a href="/html/quiz.html">
+                  <img src="/icons/quiz.png" alt="Zum Quiz" class="nav-icon">
+                  <span>Zum Quiz</span>
+              </a>
+              <a href="/html/abzeichen.html">
+                  <img src="/icons/abzeichen.png" alt="Zu den Abzeichen" class="nav-icon">
+                  <span>Zu den Abzeichen</span>
+              </a>
+              <a href="/html/rangliste.html" class="active">
+                  <img src="/icons/rangliste.png" alt="Zur Rangliste" class="nav-icon">
+                  <span>Zur Rangliste</span>
+              </a>
+          </nav>
+          <div class="burger-menu">
+              <div class="burger"></div>
+          </div>
+      </header>
+
+      <div class="content-container">
+        <section class="home">
+          <div class="home-content">
+            <div class="single-content">
+              <h1>Rangliste</h1>
+              <p>Diese Rangliste präsentiert die zehn führenden Spieler, sortiert nach der Gesamtzahl der in Quizspielen erzielten Punkte. Jede korrekt beantwortete Frage erhöht die Gesamtpunktzahl des Spielers.
+              Am Ende eines jeden Quizspiels haben die Spieler die Möglichkeit, ihre erreichte Punktzahl in die Rangliste einzutragen.</p>
+              <div id="highScores" class="flex-center flex-column">
+                <ul id="highScoresList"></ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
+        </div>
+    </footer>
+
+    <script src="/js/rangliste.js"></script>
+  </body>
+</html>

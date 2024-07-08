@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abzeichen</title>
+    <link rel="stylesheet" href="../css/abzeichen.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="/Webseite_1.html" class="logo">Quiz</a>
+        <nav class="navbar">
+            <a href="/html/quiz.html">
+                <img src="/icons/quiz.png" alt="Zum Quiz" class="nav-icon">
+                <span>Zum Quiz</span>
+            </a>
+            <a href="/html/abzeichen.html">
+                <img src="/icons/abzeichen.png" alt="Zu den Abzeichen" class="nav-icon">
+                <span>Zu den Abzeichen</span>
+            </a>
+            <a href="/html/rangliste.html">
+                <img src="/icons/rangliste.png" alt="Zur Rangliste" class="nav-icon">
+                <span>Zur Rangliste</span>
+            </a>
+        </nav>
+        <button class="burger-menu" aria-label="Burger-Menü">
+            <span class="burger"></span>
+        </button>
+    </header>
+
+    <main class="main">
+        <section class="container-background">
+            <section class="container">
+                <section class="badges-section" aria-labelledby="badges-heading">
+                    <header>
+                        <h2 id="badges-heading" class="h1">Mögliche Abzeichen</h2>
+                        <p class="p">Es gibt 4 mögliche Abzeichen, die man beim Beenden des Quiz erreichen kann. Für jede richtig beantwortete Frage erhält man einen Punkt. Unter den Abzeichen steht die zu erreichende Punktzahl, um diese erhalten zu können.</p>
+                    </header>
+                    <section class="badge-grid">
+                        <article class="badge" id="badge1">
+                            <img src="../img/barrierefrei/TeilnnehmerAbzeichen.png" alt="Teilnehmer Abzeichen" aria-describedby="badge1-desc">
+                            <div class="badge-text">
+                                <h3 class="h1">Teilnehmer Abzeichen</h3>
+                                <p id="badge1-desc" class="p">ab 0-2 Punkten</p>
+                            </div>
+                        </article>
+                        <article class="badge" id="badge2">
+                            <img src="../img/barrierefrei/BronzeAbzeichen.png" alt="Bronze Abzeichen" aria-describedby="badge2-desc">
+                            <div class="badge-text">
+                                <h3 class="h1">Bronze Abzeichen</h3>
+                                <p id="badge2-desc" class="p">ab 3-5 Punkte</p>
+                            </div>
+                        </article>
+                        <article class="badge" id="badge3">
+                            <img src="../img/barrierefrei/SilberAbzeichen.png" alt="Silber Abzeichen" aria-describedby="badge3-desc">
+                            <div class="badge-text">
+                                <h3 class="h1">Silber Abzeichen</h3>
+                                <p id="badge3-desc" class="p">ab 6-8 Punkten</p>
+                            </div>
+                        </article>
+                        <article class="badge" id="badge4">
+                            <img src="../img/barrierefrei/GoldAbzeichen.png" alt="Gold Abzeichen" aria-describedby="badge4-desc">
+                            <div class="badge-text">
+                                <h3 class="h1">Gold Abzeichen</h3>
+                                <p id="badge4-desc" class="p">ab 9-10 Punkten</p>
+                            </div>
+                        </article>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <section class="footer-content">
+            <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
+        </section>
+    </footer>
+
+    <script src="../js/updateBadges.js"></script>
+</body>
+</html>
