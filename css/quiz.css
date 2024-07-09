@@ -151,6 +151,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 18px; /* Festlegen der Textgröße auf 18px */
 }
 
 .choice-container.richtig::after,
@@ -212,8 +213,8 @@ input::placeholder {
 }
 
 #progressBar {
-  width: 50rem;
-  height: 2rem;
+  width: 100%; /* Füllt die gesamte Breite */
+  height: 2rem; /* Festlegen der Höhe des Fortschrittsbalkens */
   border: 0.3rem solid var(--main-color);
   margin-top: 1.5rem;
   border-radius: 20px;
@@ -230,6 +231,7 @@ input::placeholder {
 
 #progressText {
   text-align: left;
+  font-size: 1.4rem; /* Reduziert die Schriftgröße des Fortschrittstexts */
 }
 
 #loader {
@@ -246,7 +248,7 @@ input::placeholder {
   color: #fff;
   padding: 2rem 10%;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 18px; /* Festlegen der Schriftgröße im Fußbereich auf 18px */
   border-top: 0.2rem solid #000;
   width: 100%;
 }
@@ -262,44 +264,92 @@ input::placeholder {
   margin-top: 2rem;
 }
 
-@media (min-width: 2561px) {
-  .content-container {
-    max-width: 140rem;
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 1082px) {
+  body {
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
   }
-}
 
-@media (max-width: 768px) {
-  .content-container {
-    margin-top: 14rem;
+  .container {
+    padding: 0.5rem; /* Reduziert den Innenabstand */
   }
 
   .choice-container {
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.5rem; /* Reduziert den Abstand zwischen den Optionen */
   }
 
   .hud-main-text {
-    font-size: 2.4rem; 
+    font-size: 2.4rem; /* Reduziert die Schriftgröße des Haupttexts */
   }
 
   #hud {
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem; /* Reduziert den Abstand unter dem HUD */
+  }
+
+  #progressBar {
+    width: 100%; /* Füllt die gesamte Breite */
+    height: 1.5rem; /* Reduziert die Höhe der Fortschrittsleiste */
+    margin-top: 1rem; /* Reduziert den oberen Abstand */
+  }
+
+  .footer {
+    padding: 1.5rem 5%; /* Reduziert den Innenabstand des Fußbereichs */
+    font-size: 18px; /* Festlegen der Schriftgröße im Fußbereich auf 18px */
+  }
+
+  .choice-prefix {
+    padding: 1.2rem 2rem; /* Reduziert das Padding des choice-prefix */
+  }
+
+  .choice-text {
+    font-size: 18px; /* Setzt die Textgröße der choice-text auf 18px */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Setzt die Überschriftengröße auf 1.5em */
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 832px) {
+  body {
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+  }
+
   .container {
-    padding: 0.5rem; 
+    padding: 0.5rem; /* Reduziert den Innenabstand */
   }
 
   .choice-container {
-    margin-bottom: 0.3rem; 
+    margin-bottom: 0.3rem; /* Reduziert den Abstand zwischen den Optionen */
   }
-}
 
-@media (min-width: 2561px) {
-  .container {
-    max-width: 140rem; 
+  .hud-main-text {
+    font-size: 2rem; /* Reduziert die Schriftgröße des Haupttexts */
+  }
+
+  #hud {
+    margin-bottom: 0.8rem; /* Reduziert den Abstand unter dem HUD */
+  }
+
+  #progressBar {
+    width: 100%; /* Füllt die gesamte Breite */
+    height: 1.2rem; /* Reduziert die Höhe der Fortschrittsleiste */
+    margin-top: 0.8rem; /* Reduziert den oberen Abstand */
+  }
+
+  .footer {
+    padding: 1rem 5%; /* Reduziert den Innenabstand des Fußbereichs */
+    font-size: 18px; /* Festlegen der Schriftgröße im Fußbereich auf 18px */
+  }
+
+  .choice-prefix {
+    padding: 1rem 1.5rem; /* Reduziert das Padding des choice-prefix */
+  }
+
+  .choice-text {
+    font-size: 18px; /* Setzt die Textgröße der choice-text auf 18px */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Setzt die Überschriftengröße auf 1.5em */
   }
 }
