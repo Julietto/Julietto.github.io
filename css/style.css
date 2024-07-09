@@ -8,8 +8,7 @@
 }
 
 body {
-    color: #000; /* Besserer Kontrast */
-    background-color: #fff; /* Sicherstellen, dass der Hintergrund hell genug ist */
+    color: #fff;
 }
 
 .header {
@@ -321,16 +320,5 @@ body {
 
     .home-content h1 {
         font-size: 2.8rem; 
-    }
-}
-
-a:focus, button:focus, .button:focus {
-    outline: 2px solid #0073E6;
-    outline-offset: 2px;
-}
-
-@media (max-width: 768px) {
-    .burger-menu {
-        display: block; /* Stellt sicher, dass das Burger-Menü sichtbar ist */
     }
 }

@@ -1,3 +1,4 @@
+
 :root {
   --main-color: #0073E6;
   --secondary-color: #2b2c2e;
@@ -13,6 +14,10 @@
   margin: 0;
   padding: 0;
   font-weight: bold;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 main {
@@ -145,13 +150,12 @@ input::placeholder {
 }
 
 .choice-text {
-  padding: 1.2rem;
-  width: 100%;
+  padding: 1rem;
   color: #000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px; /* Festlegen der Textgröße auf 18px */
+  font-size: 18px;
 }
 
 .choice-container.richtig::after,
@@ -213,12 +217,12 @@ input::placeholder {
 }
 
 #progressBar {
-  width: 100%; /* Füllt die gesamte Breite */
-  height: 2rem; /* Festlegen der Höhe des Fortschrittsbalkens */
-  border: 0.3rem solid var(--main-color);
-  margin-top: 1.5rem;
+  width: 50rem;
+  height: 2.5rem;
+  border: 0.33rem solid var(--main-color);
   border-radius: 20px;
   background-color: #fff;
+  margin: 12px 0;
 }
 
 #progressBarFull {
@@ -231,7 +235,6 @@ input::placeholder {
 
 #progressText {
   text-align: left;
-  font-size: 1.4rem; /* Reduziert die Schriftgröße des Fortschrittstexts */
 }
 
 #loader {
@@ -248,7 +251,7 @@ input::placeholder {
   color: #fff;
   padding: 2rem 10%;
   text-align: center;
-  font-size: 18px; /* Festlegen der Schriftgröße im Fußbereich auf 18px */
+  font-size: 18px;
   border-top: 0.2rem solid #000;
   width: 100%;
 }
@@ -264,92 +267,149 @@ input::placeholder {
   margin-top: 2rem;
 }
 
-@media (max-width: 1082px) {
+
+@media (max-width: 1024px) {
+
   body {
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    overflow-x: hidden;
   }
 
   .container {
-    padding: 0.5rem; /* Reduziert den Innenabstand */
+    padding: 1rem;
   }
 
   .choice-container {
-    margin-bottom: 0.5rem; /* Reduziert den Abstand zwischen den Optionen */
+    width: calc(100% - 2rem); /* Platz für Schatten lassen */
+    margin-bottom: 0.5rem;
   }
 
   .hud-main-text {
-    font-size: 2.4rem; /* Reduziert die Schriftgröße des Haupttexts */
-  }
-
-  #hud {
-    margin-bottom: 1rem; /* Reduziert den Abstand unter dem HUD */
+    font-size: 2.4rem;
   }
 
   #progressBar {
-    width: 100%; /* Füllt die gesamte Breite */
-    height: 1.5rem; /* Reduziert die Höhe der Fortschrittsleiste */
-    margin-top: 1rem; /* Reduziert den oberen Abstand */
+    width: 40rem;
+    height: 2.5rem;
+    border: 0.33rem solid var(--main-color);
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 20px 0;
   }
 
   .footer {
-    padding: 1.5rem 5%; /* Reduziert den Innenabstand des Fußbereichs */
-    font-size: 18px; /* Festlegen der Schriftgröße im Fußbereich auf 18px */
+    padding: 2rem 10%;
+    font-size: 18px;
   }
 
   .choice-prefix {
-    padding: 1.2rem 2rem; /* Reduziert das Padding des choice-prefix */
+    padding: 1.5rem 2.5rem;
   }
 
   .choice-text {
-    font-size: 18px; /* Setzt die Textgröße der choice-text auf 18px */
+    font-size: 18px;
   }
 
   h1 {
-    font-size: 1.5em; /* Setzt die Überschriftengröße auf 1.5em */
+    font-size: 1.5em;
   }
 }
 
-@media (max-width: 832px) {
-  body {
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
-  }
 
+
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    font-size:12px;
+  }
+  .h2 {
+    font-size:24px;
+  }
   .container {
-    padding: 0.5rem; /* Reduziert den Innenabstand */
+    padding: 0.5rem;
   }
 
   .choice-container {
-    margin-bottom: 0.3rem; /* Reduziert den Abstand zwischen den Optionen */
-  }
-
-  .hud-main-text {
-    font-size: 2rem; /* Reduziert die Schriftgröße des Haupttexts */
+    width: calc(100% - 2rem); 
+    margin-bottom: 0.5rem;
   }
 
   #hud {
-    margin-bottom: 0.8rem; /* Reduziert den Abstand unter dem HUD */
+    margin-bottom: 1rem;
   }
 
   #progressBar {
-    width: 100%; /* Füllt die gesamte Breite */
-    height: 1.2rem; /* Reduziert die Höhe der Fortschrittsleiste */
-    margin-top: 0.8rem; /* Reduziert den oberen Abstand */
+    width: 20rem;
+    height: 2.5rem;
+    border: 0.33rem solid var(--main-color);
+    border-radius: 20px;
+    background-color: #fff;
   }
 
   .footer {
-    padding: 1rem 5%; /* Reduziert den Innenabstand des Fußbereichs */
-    font-size: 18px; /* Festlegen der Schriftgröße im Fußbereich auf 18px */
+    padding: 2rem 10%;
+    font-size: 18px;
   }
 
   .choice-prefix {
-    padding: 1rem 1.5rem; /* Reduziert das Padding des choice-prefix */
+    padding: 1.5rem 2.5rem;
   }
 
   .choice-text {
-    font-size: 18px; /* Setzt die Textgröße der choice-text auf 18px */
+    font-size: 18px;
   }
 
   h1 {
-    font-size: 1.5em; /* Setzt die Überschriftengröße auf 1.5em */
+    font-size: 1.5em;
+  }
+}
+
+
+@media (max-width: 425px) {
+
+  .content-container {
+    padding:1rem;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .choice-container {
+    width: calc(100% - 5rem); 
+    margin-bottom: 0.5rem;
+    display:flex;
+  }
+
+  #hud {
+    margin-bottom: 1rem;
+  }
+
+  #progressBar {
+    width: 20rem;
+    height: 2.5rem;
+    border: 0.33rem solid var(--main-color);
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  .footer {
+    padding: 2rem 10%;
+    font-size: 18px;
+  }
+
+  .choice-prefix {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .choice-text {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 1.5em;
   }
 }
