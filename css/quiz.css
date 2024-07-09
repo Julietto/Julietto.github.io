@@ -19,7 +19,6 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1rem; /* Added padding for better spacing on small screens */
 }
 
 h1, h2, h3, h4 {
@@ -27,14 +26,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 3rem; /* Adjusted size for smaller screens */
+  font-size: 5.4rem;
   color: var(--secondary-color);
   margin-bottom: 3rem;
-  text-align: center; /* Centered text for better readability */
 }
 
 h1 > span {
-  font-size: 1.5rem; /* Adjusted size for smaller screens */
+  font-size: 2.4rem;
   font-weight: 500;
 }
 
@@ -64,7 +62,7 @@ h1 > span {
 .btn {
   font-size: 1.8rem;
   padding: 1rem 0;
-  width: 100%; /* Full width for better scaling on small screens */
+  width: 20rem;
   text-align: center;
   border: 0.1rem solid var(--main-color);
   margin-bottom: 1rem;
@@ -96,7 +94,7 @@ form {
 
 input {
   margin-bottom: 1rem;
-  width: 100%; /* Full width for better scaling on small screens */
+  width: 20rem;
   padding: 1.5rem;
   font-size: 1.8rem;
   border: none;
@@ -111,7 +109,6 @@ input::placeholder {
 
 .choice-container {
   display: flex;
-  flex-direction: column; /* Column direction for better readability on small screens */
   margin-bottom: 1rem;
   width: 100%;
   border: 0.2rem solid var(--main-color, 0.5);
@@ -197,8 +194,7 @@ input::placeholder {
 
 #hud {
   display: flex;
-  flex-direction: column; /* Column direction for better scaling on small screens */
-  align-items: center; /* Center aligned for better readability */
+  justify-content: space-between;
   width: 100%;
   padding: 1rem;
 }
@@ -216,7 +212,7 @@ input::placeholder {
 }
 
 #progressBar {
-  width: 100%; /* Full width for better scaling on small screens */
+  width: 50rem;
   height: 2rem;
   border: 0.3rem solid var(--main-color);
   margin-top: 1.5rem;
@@ -293,42 +289,17 @@ input::placeholder {
 }
 
 @media (max-width: 425px) {
-  .content-container {
-    padding: 1rem; /* Adjusted padding for smaller screens */
-    margin-top: 10rem; /* Adjusted margin for smaller screens */
+  .container {
+    padding: 0.5rem; 
   }
 
   .choice-container {
     margin-bottom: 0.3rem; 
   }
-
-  .hud-prefix {
-    font-size: 1.6rem; /* Adjusted font size for smaller screens */
-  }
-
-  .hud-main-text {
-    font-size: 2.4rem; /* Adjusted font size for smaller screens */
-  }
-
-  #progressBar {
-    width: 100%; /* Full width for better scaling on small screens */
-  }
 }
 
-@media (max-width: 320px) {
-  .choice-container {
-    margin-bottom: 0.2rem; /* Adjusted margin for very small screens */
-  }
-
-  .hud-prefix {
-    font-size: 1.4rem; /* Adjusted font size for very small screens */
-  }
-
-  .hud-main-text {
-    font-size: 2rem; /* Adjusted font size for very small screens */
-  }
-
-  #progressBar {
-    width: 100%; /* Full width for very small screens */
+@media (min-width: 2561px) {
+  .container {
+    max-width: 140rem; 
   }
 }
