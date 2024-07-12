@@ -5,32 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header">        
         <a href="/index.html" class="logo" aria-label="Zur Startseite" tabindex="0">Quiz</a>
         <nav class="navbar" aria-label="Hauptnavigation">
-            <a href="/html/quiz.html" tabindex="0">
+        <!-- The hamburger menu -->
+        <label for="menu" tabindex="0"> 🍔 </label>
+        <input id="menu" type="checkbox" />
+
+        <ul>
+            <li><a href="/html/quiz.html" tabindex="0">
                 <img src="icons/quiz.png" alt="Zum Quiz" class="nav-icon">
                 <span>Zum Quiz</span>
-            </a>
-            <a href="/html/abzeichen.html" tabindex="0">
+                </a>
+            </li>
+            <li><a href="/html/abzeichen.html" tabindex="0">
                 <img src="icons/abzeichen.png" alt="Zu den Abzeichen" class="nav-icon">
                 <span>Zu den Abzeichen</span>
-            </a>
-            <a href="/html/rangliste.html" tabindex="0">
+            </a></li>
+            <li><a href="/html/rangliste.html" tabindex="0">
                 <img src="icons/rangliste.png" alt="Zur Rangliste" class="nav-icon">
                 <span>Zur Rangliste</span>
-            </a>
+            </a></li>
+            </ul>
         </nav>
     </header>
+    
 
     <main class="main">
         <section class="content-container">
             <article class="home-content">
                 <header class="single-content">
-                    <h1 tabindex="0">Worum es geht</h1>
+                    <h3 tabindex="0">Worum es geht</h3>
                     <p tabindex="0">Als Teil meiner Bachelorarbeit habe ich eine Webseite erstellt, die durch ein Quiz das Verständnis für Zugänglichkeit und spielerische Elemente im Frontend-Design näher bringen soll.</p>
                     <p tabindex="0">Dieses Quiz ist eine spannende Möglichkeit, Ihr Wissen zu testen und dabei Punkte zu sammeln und Abzeichen zu verdienen.</p>
                     <p tabindex="0">Jede Quizfrage präsentiert vier mögliche Lösungen, aus denen die korrekte ausgewählt werden muss. Für jede richtige Antwort erhalten die Teilnehmer Punkte, die sie dem Erreichen des nächsten Leistungsabzeichens näherbringen.</p>
@@ -47,12 +55,8 @@
             <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
         </div>
     </footer>
-
-    <!---JavaScript-->
-    <script src="questions.js"></script>
-    <script src="script.js"></script>
     <script>
-        // JavaScript for burger menu toggle
+        // JavaScript für das Burgermenü Toggle
         document.querySelector('.burger-menu').addEventListener('click', function() {
             const navbar = document.querySelector('.navbar');
             const burger = document.querySelector('.burger');
@@ -60,5 +64,6 @@
             burger.classList.toggle('close');
         });
     </script>
+    
 </body>
 </html>
