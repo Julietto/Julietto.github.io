@@ -8,31 +8,26 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header class="header">        
-        <a href="/index.html" class="logo" aria-label="Zur Startseite" tabindex="0">Quiz</a>
-        <nav class="navbar" aria-label="Hauptnavigation">
-        <!-- The hamburger menu -->
-        <label for="menu" tabindex="0"> 🍔 </label>
-        <input id="menu" type="checkbox" />
-
-        <ul>
-            <li><a href="/html/quiz.html" tabindex="0">
-                <img src="icons/quiz.png" alt="Zum Quiz" class="nav-icon">
+    <header class="header">
+        <a href="/index.html" class="logo">Quiz</a>
+        <div class="burger-menu">
+            <div class="burger"></div>
+        </div>
+        <nav class="navbar">
+            <a href="/html/quiz.html">
+                <img src="/icons/quiz.png" alt="Zum Quiz" class="nav-icon">
                 <span>Zum Quiz</span>
-                </a>
-            </li>
-            <li><a href="/html/abzeichen.html" tabindex="0">
-                <img src="icons/abzeichen.png" alt="Zu den Abzeichen" class="nav-icon">
+            </a>
+            <a href="/html/abzeichen.html">
+                <img src="/icons/abzeichen.png" alt="Zu den Abzeichen" class="nav-icon">
                 <span>Zu den Abzeichen</span>
-            </a></li>
-            <li><a href="/html/rangliste.html" tabindex="0">
-                <img src="icons/rangliste.png" alt="Zur Rangliste" class="nav-icon">
+            </a>
+            <a href="/html/rangliste.html">
+                <img src="/icons/rangliste.png" alt="Zur Rangliste" class="nav-icon">
                 <span>Zur Rangliste</span>
-            </a></li>
-            </ul>
+            </a>
         </nav>
     </header>
-    
 
     <main class="main">
         <section class="content-container">
@@ -64,6 +59,5 @@
             burger.classList.toggle('close');
         });
     </script>
-    
 </body>
 </html>

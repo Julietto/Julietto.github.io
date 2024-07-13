@@ -59,10 +59,24 @@
 .content-container {
   background-color: #ffffff;
   color: #333333;
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-bottom: 24rem;
   margin: 8rem auto 0;
   max-width: 90rem;
   position: relative;
   z-index: 2;
+}
+
+
+@media (max-width: 425px) {
+  .content-container {
+    background-color: #ffffff;
+    color: #333333;
+    padding-top: 5rem;
+    padding-bottom: 24rem;
+    margin: 8rem auto 0;
+    max-width: 90rem;
+    position: relative;
+    z-index: 2;
+}
 }
