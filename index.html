@@ -10,9 +10,11 @@
 <body>
     <header class="header">
         <a href="/index.html" class="logo">Quiz</a>
+
         <div class="burger-menu">
             <div class="burger"></div>
         </div>
+        
         <nav class="navbar">
             <a href="/html/quiz.html">
                 <img src="/icons/quiz.png" alt="Zum Quiz" class="nav-icon">
@@ -50,14 +52,6 @@
             <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
         </div>
     </footer>
-    <script>
-        // JavaScript für das Burgermenü Toggle
-        document.querySelector('.burger-menu').addEventListener('click', function() {
-            const navbar = document.querySelector('.navbar');
-            const burger = document.querySelector('.burger');
-            navbar.classList.toggle('active');
-            burger.classList.toggle('close');
-        });
-    </script>
+    <script src="/js/burgermenu.js"></script>
 </body>
 </html>
