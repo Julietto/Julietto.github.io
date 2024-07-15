@@ -1,0 +1,47 @@
+/* Add these styles to abzeichen.css */
+
+.h3 {
+    font-size: 34px;
+}
+
+.p {
+    font-size: 18px;
+}
+
+.content-container {
+    max-width: 90rem;
+    padding: 6.5rem 8rem;
+}
+
+.content-container h2, .content-container h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.content-container p {
+    margin-bottom: 40px;
+}
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.badge {
+    background-color: #fff; /* White background for contrast */
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the box */
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; 
+    align-items: center;
+}
+
+.badge:hover {
+    transform: scale(1.05); /* Slightly enlarge the badge on hover */
+}
