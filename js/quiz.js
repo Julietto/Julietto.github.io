@@ -14,6 +14,9 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questions = [];
 
+const correctSound = new Audio('../audio/correct.mp3');
+const wrongSound = new Audio('../audio/wrong.mp3');
+
 fetch("../json/fragen.json")
     .then(res => {
         return res.json();
@@ -82,6 +85,9 @@ handleChoiceSelection = e => {
     
     if (classToApply === "richtig") {
         incrementScore(1);  // Immer 1 Punkt für eine richtige Antwort
+        correctSound.play();
+    } else {
+        wrongSound.play();
     }
 
     selectedChoice.classList.add(classToApply);
@@ -116,4 +122,3 @@ assignBadges = (score) => {
 
     localStorage.setItem("badges", JSON.stringify(badges));
 };
-

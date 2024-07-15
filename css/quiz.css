@@ -118,7 +118,7 @@ input::placeholder {
   background-color: #ffffff;
   color: #333333;
   padding-top: 5rem;
-  padding-bottom: 8rem;
+  padding-bottom: 9rem;
   margin-top: 8rem;
   max-width: 90rem;
   position: relative;
@@ -422,10 +422,14 @@ input::placeholder {
     overflow-x: hidden;
   }
 
-  .content-container {
-    padding: 4rem;
+  .container {
+    padding: 1rem;
   }
 
+  .content-container {
+    padding:2rem 2rem 3rem 2rem;
+  }
+  
   .choice-container {
     width: calc(100% - 2rem); /* Platz für Schatten lassen */
     margin-bottom: 0.5rem;
@@ -460,4 +464,16 @@ input::placeholder {
   .choice-text {
     font-size: 16px;
   }
+}
+
+@media (max-width: 320px) {
+  .content-container {
+    padding:2rem 2rem 3rem 2rem;
+  }
+
+  .choice-container {
+    width: calc(100% - 1rem);
+    margin-bottom: 0.5rem;
+}
+
 }
