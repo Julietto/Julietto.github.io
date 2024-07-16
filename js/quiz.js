@@ -28,85 +28,79 @@ fetch("../json/fragen.json")
     .catch(err => {
         console.error(err);
     });
-
-startQuiz = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    getNewQuestion();
-    game.classList.remove("hidden");
-    loader.classList.add("hidden");
-};
-
-getNewQuestion = () => {
-    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem("mostRecentScore", score);
-        assignBadges(score);
-        return window.location.assign("../html/last.html");
-    }
-    questionCounter++;
-    progressText.innerText = `Frage: ${questionCounter}/${MAX_QUESTIONS}`;
-
-    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
-
-    choices.forEach((choice) => {
-        const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number];
-    });
-    availableQuestions.splice(questionIndex, 1);
-    acceptingAnswers = true;
-};
-
-choices.forEach(choice => {
-    choice.parentElement.addEventListener("click", e => {
-        handleChoiceSelection(e);
-    });
-
-    choice.parentElement.addEventListener("keydown", e => {
-        if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            handleChoiceSelection(e);
-        }
-    });
-});
-
-handleChoiceSelection = e => {
-    if (!acceptingAnswers) return;
-    acceptingAnswers = false;
-
-    const selectedChoice = e.target.closest(".choice-container");
-    const selectedAnswer = selectedChoice.querySelector(".choice-text").dataset["number"];
-
-    const classToApply = selectedAnswer == currentQuestion.answer ? "richtig" : "falsch";
-    
-    if (classToApply === "richtig") {
-        incrementScore(1);  // Immer 1 Punkt für eine richtige Antwort
-        correctSound.play();
-    } else {
-        wrongSound.play();
-    }
-
-    selectedChoice.classList.add(classToApply);
-    selectedChoice.setAttribute("aria-pressed", "true");
-
-    setTimeout(() => {
-        selectedChoice.classList.remove(classToApply);
-        selectedChoice.setAttribute("aria-pressed", "false");
+    startQuiz = () => {
+        questionCounter = 0;
+        score = 0;
+        availableQuestions = [...questions];
         getNewQuestion();
-        assignBadges(score);
-
-    }, 1500);
-};
-
-incrementScore = num => {
-    score += num;
-    scoreText.innerText = score;
-};
-
+        game.classList.remove("hidden");
+        loader.classList.add("hidden");
+    };
+    
+    getNewQuestion = () => {
+        if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+            localStorage.setItem("mostRecentScore", score);
+            assignBadges(score);
+            return window.location.assign("../html/last.html");
+        }
+        questionCounter++;
+        progressText.innerText = `Frage: ${questionCounter}/${MAX_QUESTIONS}`;
+        progressText.setAttribute('aria-label', `Frage: ${questionCounter} von ${MAX_QUESTIONS}`);
+    
+        const progressPercentage = (questionCounter / MAX_QUESTIONS) * 100;
+        progressBarFull.style.width = `${progressPercentage}%`;
+        progressBar.setAttribute('aria-valuenow', progressPercentage);
+        progressBar.setAttribute('aria-valuetext', `${progressPercentage}% fertig`);
+    
+        const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+        currentQuestion = availableQuestions[questionIndex];
+        question.innerText = currentQuestion.question;
+    
+        choices.forEach((choice) => {
+            const number = choice.dataset["number"];
+            choice.innerText = currentQuestion["choice" + number];
+            choice.parentElement.setAttribute('aria-label', `Antwort ${String.fromCharCode(64 + Number(number))}: ${currentQuestion["choice" + number]}`);
+        });
+        availableQuestions.splice(questionIndex, 1);
+        acceptingAnswers = true;
+    };
+    
+    selectAnswer = (choiceNumber) => {
+        if (!acceptingAnswers) return;
+        acceptingAnswers = false;
+        const selectedChoice = document.querySelector(`.choice-container:nth-child(${choiceNumber + 2})`);
+        const selectedAnswer = selectedChoice.querySelector('.choice-text').innerText;
+    
+        const classToApply = selectedAnswer === currentQuestion.answer ? "correct" : "incorrect";
+    
+        if (classToApply === "correct") {
+            incrementScore(CORRECT_BONUS);
+        }
+    
+        selectedChoice.classList.add(classToApply);
+    
+        setTimeout(() => {
+            selectedChoice.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);
+    };
+    
+    incrementScore = (num) => {
+        score += num;
+        scoreText.innerText = score;
+        scoreText.setAttribute('aria-label', `Punkte: ${score}`);
+    };
+    
+    document.querySelectorAll('.choice-container').forEach((element, index) => {
+        element.addEventListener('click', () => selectAnswer(index + 1));
+        element.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                selectAnswer(index + 1);
+            }
+        });
+    });
+    
+    
 assignBadges = (score) => {
     let badges = [];
 

@@ -5,27 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz</title>
-      <link rel="stylesheet" href="../style.css"> 
+    <link rel="stylesheet" href="../style.css"> 
     <link rel="stylesheet" href="../css/quiz.css"> 
-
-    
 </head>
 <body>
     <header class="header">
-        <a href="/index.html" class="logo">Quiz</a>
-        <div class="burger-menu">
-            <div class="burger"></div>
+        <a href="/index.html" class="logo" aria-label="Zur Startseite">Quiz</a>
+        <div class="burger-menu" aria-label="Navigationsmenü">
+            <div class="burger" aria-hidden="true"></div>
         </div>
-        <nav class="navbar">
-            <a href="/html/quiz.html">
+        <nav class="navbar" aria-label="Hauptnavigation">
+            <a href="/html/quiz.html" aria-label="Zum Quiz">
                 <img src="/icons/quiz.png" alt="Zum Quiz" class="nav-icon">
                 <span>Zum Quiz</span>
             </a>
-            <a href="/html/abzeichen.html">
+            <a href="/html/badges.html" aria-label="Zu den Abzeichen">
                 <img src="/icons/abzeichen.png" alt="Zu den Abzeichen" class="nav-icon">
                 <span>Zu den Abzeichen</span>
             </a>
-            <a href="/html/rangliste.html">
+            <a href="/html/leaderboard.html" aria-label="Zur Rangliste">
                 <img src="/icons/rangliste.png" alt="Zur Rangliste" class="nav-icon">
                 <span>Zur Rangliste</span>
             </a>
@@ -38,30 +36,30 @@
             <div id="game" class="justify-center flex-column hidden" aria-live="polite">
                 <div id="hud" aria-label="Spielstatus">
                     <div id="hud-item">
-                        <p id="progressText" class="hud-prefix" aria-live="polite">Frage 1 von 10</p>    
-                        <div id="progressBar" aria-hidden="true">
-                            <div id="progressBarFull"></div>
+                        <p id="progressText" class="hud-prefix" aria-live="polite" tabindex="0">Frage 1 von 10</p>    
+                        <div id="progressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0% fertig" tabindex="0">
+                            <div id="progressBarFull" style="width: 0%;"></div>
                         </div>         
                     </div>
                     <div id="hud-item">
                         <p class="hud-prefix">Punkte</p>
-                        <h1 class="hud-main-text" id="score" aria-live="polite">0</h1>
+                        <h1 class="hud-main-text" id="score" aria-live="polite" tabindex="0" aria-label="Punkte: 0">0</h1>
                     </div>
                 </div>
-                <h3 id="question" aria-live="polite">Frage wird geladen...</h3>
-                <div class="choice-container" role="button" aria-pressed="false" tabindex="0" aria-label="Antwort A: Option 1">
+                <h3 id="question" aria-live="polite" tabindex="0">Frage wird geladen...</h3>
+                <div class="choice-container" role="button" aria-pressed="false" tabindex="0" aria-label="Antwort A: Option 1" onclick="selectAnswer(1)" onkeypress="handleKeyPress(event, 1)">
                     <p class="choice-prefix">A</p>
                     <p class="choice-text" data-number="1"></p>
                 </div>
-                <div class="choice-container" role="button" aria-pressed="false" tabindex="0" aria-label="Antwort B: Option 2">
+                <div class="choice-container" role="button" aria-pressed="false" tabindex="0" aria-label="Antwort B: Option 2" onclick="selectAnswer(2)" onkeypress="handleKeyPress(event, 2)">
                     <p class="choice-prefix">B</p>
                     <p class="choice-text" data-number="2"></p>
                 </div>
-                <div class="choice-container" role="button" aria-pressed="false" tabindex="0" aria-label="Antwort C: Option 3">
+                <div class="choice-container" role="button" aria-pressed="false" tabindex="0" aria-label="Antwort C: Option 3" onclick="selectAnswer(3)" onkeypress="handleKeyPress(event, 3)">
                     <p class="choice-prefix">C</p>
                     <p class="choice-text" data-number="3"></p>
                 </div>
-                <div class="choice-container" role="button" aria-pressed="false" tabindex="0" aria-label="Antwort D: Option 4">
+                <div class="choice-container" role="button" aria-pressed="false" tabindex="0" aria-label="Antwort D: Option 4" onclick="selectAnswer(4)" onkeypress="handleKeyPress(event, 4)">
                     <p class="choice-prefix">D</p>
                     <p class="choice-text" data-number="4"></p>
                 </div>
@@ -69,12 +67,12 @@
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" tabindex="0">
         <div class="footer-content">
             <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
         </div>
     </footer>
-    <script src="/js/burgermenu.js"></script>
-    <script src="../js/quiz.js"></script>
+    <script src="/js/burgermenu.js" aria-hidden="true"></script>
+    <script src="../js/quiz.js" defer></script>
 </body>
 </html>

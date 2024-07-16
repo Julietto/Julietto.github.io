@@ -1,0 +1,66 @@
+.h1 {
+    font-size: 32px;
+    padding: 0.5rem 0 2rem 0;
+}
+
+.p {
+    font-size: 18px;
+}
+
+.content-container {
+    max-width: 90rem;
+    padding: 6.5rem 8rem;
+}
+
+.content-container h2, .content-container h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.content-container p {
+    margin-bottom: 40px;
+}
+
+#highScores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#highScoresList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+#highScoresList li {
+    background: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#highScoresList li span {
+    margin-left: auto;
+}
+
+@media (max-width: 425px) {
+    .content-container {
+        max-width: 90rem;
+        padding: 3em;
+    }
+
+    .p{
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+}
