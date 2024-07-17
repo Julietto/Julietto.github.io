@@ -171,9 +171,20 @@ input::placeholder {
   font-size: 16px;
 }
 
-.choice-container.richtig::after,
-.choice-container.falsch::after {
-  content: "";
+/* Aktualisierte Stile für die richtigen und falschen Antworten */
+
+.correct {
+  background-color: var(--correct-color);
+  color: white;
+}
+
+.correct .choice-text {
+  color: white;
+}
+
+.correct::after {
+  content: "✔";
+  color: #4CAF50; /* Grünes Häkchen */
   font-size: 2.4rem;
   font-weight: bold;
   position: absolute;
@@ -182,32 +193,24 @@ input::placeholder {
   transform: translateY(-50%);
 }
 
-.choice-container.richtig::after {
-  content: "✔";
-  color: var(--correct-color);
-}
-
-.choice-container.falsch::after {
-  content: "✖";
-  color: var(--wrong-color);
-}
-
-.richtig {
-  background-color: var(--correct-color);
-  font-size: 16px;
-}
-
-.richtig .choice-text {
-  color: white;
-}
-
-.falsch {
+.incorrect {
   background-color: var(--wrong-color);
-  font-size: 16px;
+  color: white;
 }
 
-.falsch .choice-text {
+.incorrect .choice-text {
   color: white;
+}
+
+.incorrect::after {
+  content: "✖";
+  color: #dc3545; /* Rotes Kreuz */
+  font-size: 2.4rem;
+  font-weight: bold;
+  position: absolute;
+  right: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #hud {
