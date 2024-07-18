@@ -39,25 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (badge) {
         case "Gold":
             badgeImage.src = "/img/barrierefrei/GoldAbzeichen.png";
-            badgeImage.alt = "Gold Abzeichen";
+            badgeImage.alt = "Gold Abzeichen mit Löwenkopf";
             badgeSound.play();
             startConfetti();
             break;
         case "Silber":
             badgeImage.src = "/img/barrierefrei/SilberAbzeichen.png";
-            badgeImage.alt = "Silber Abzeichen";
+            badgeImage.alt = "Silber Abzeichen mit Affenkopf";
             badgeSound.play();
             startConfetti();
             break;
         case "Bronze":
             badgeImage.src = "/img/barrierefrei/BronzeAbzeichen.png";
-            badgeImage.alt = "Bronze Abzeichen";
+            badgeImage.alt = "Bronze Abzeichen mit Pandakopf";
             badgeSound.play();
             startConfetti();
             break;
         default:
             badgeImage.src = "/img/barrierefrei/TeilnnehmerAbzeichen.png";
-            badgeImage.alt = "Teilgenommen Abzeichen";
+            badgeImage.alt = "Teilgenommen Abzeichen mit Pinguinkopf";
             break;
     }
 });
