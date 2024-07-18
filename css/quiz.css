@@ -1,10 +1,11 @@
+
 :root {
   --main-color: #0073E6;
   --secondary-color: #2b2c2e;
   --background-color: #fafafa;
   --correct-color: #28a745;
   --wrong-color: #dc3545;
-  --font-family: 'Arial', sans-serif;
+  --font-family:'Lato', Helvetica, sans-serif;;
 }
 
 * {
