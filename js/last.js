@@ -26,7 +26,7 @@ function saveHighScore(e) {
     highScores.splice(MAX_HIGH_SCORES);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('/rangliste.html');
+    window.location.assign('/html/leaderboard.html');
 }
 
 // Display the highest badge and play confetti
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function startConfetti() {
-    var duration = 5 * 1000;
+    var duration = 2 * 1000;
     var end = Date.now() + duration;
 
     (function frame() {

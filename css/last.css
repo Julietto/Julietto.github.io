@@ -19,7 +19,7 @@ body {
     text-align: center;
     width: 90%; /* Breiter Container */
     max-width: 800px; /* Maximale Breite */
-    margin: 2rem auto; /* Abstand zur Navigation und zentrieren */
+    margin-top: 8rem;
 }
 
 .flex-center {
@@ -130,3 +130,4 @@ a.btn:hover {
     font-size: 1.2rem;
     border-top: 0.2rem solid #000;
 }
+

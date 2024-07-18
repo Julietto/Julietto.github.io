@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px; /* Standard-Schriftgröße auf 18px gesetzt */
 }
 
 body {
@@ -23,11 +23,9 @@ body {
   min-height: 100vh;
 }
 
-
-
-
 footer {
   flex-shrink: 0;
+  font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
 }
 
 #question {
@@ -59,7 +57,6 @@ footer {
   display: none;
 }
 
-
 form {
   width: 100%;
   display: flex;
@@ -71,7 +68,7 @@ input {
   margin-bottom: 1rem;
   width: 20rem;
   padding: 1.5rem;
-  font-size: 16px;
+  font-size: 18px; /* Eingabefeld-Schriftgröße auf 18px gesetzt */
   border: none;
   box-shadow: 0 0.1rem 1.4rem 0 var(--main-color, 0.5);
   border-radius: 20px;
@@ -113,7 +110,6 @@ input::placeholder {
   transform: scale(1.05);
 }
 
-
 .choice-prefix {
   padding: 1rem 1.5rem;
   background-color: var(--main-color);
@@ -131,7 +127,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 18px; /* Auswahltext-Schriftgröße auf 18px gesetzt */
 }
 
 /* Aktualisierte Stile für die richtigen und falschen Antworten */
@@ -185,13 +181,13 @@ input::placeholder {
 
 .hud-prefix {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px; /* HUD-Schriftgröße auf 18px gesetzt */
   color: var(--main-color);
 }
 
 .hud-main-text {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px; /* HUD-Haupttext-Schriftgröße auf 18px gesetzt */
   color: var(--main-color);
 }
 
@@ -208,7 +204,7 @@ input::placeholder {
   height: 100%;
   background-color: var(--main-color);
   width: 0%;
-  border-radius: 20px;
+  border-radius: 12px;
   transition: width 0.8s ease;
 }
 
@@ -230,7 +226,7 @@ input::placeholder {
   color: #fff;
   padding: 2rem 10%;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
   border-top: 0.2rem solid #000;
   width: 100%;
 }
@@ -245,7 +241,6 @@ input::placeholder {
   justify-content: center;
   margin-top: 2rem;
 }
-
 
 @media (max-width: 1440px) {
   body {
@@ -268,10 +263,10 @@ input::placeholder {
     max-width: 70rem;
     position: relative;
     z-index: 2;
-}
+  }
 
   .hud-main-text {
-    font-size: 16px;
+    font-size: 18px; /* HUD-Haupttext-Schriftgröße auf 18px gesetzt */
   }
 
   #progressBar {
@@ -285,7 +280,7 @@ input::placeholder {
 
   .footer {
     padding: 2rem 10%;
-    font-size: 16px;
+    font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
   }
 
   .choice-prefix {
@@ -293,7 +288,7 @@ input::placeholder {
   }
 
   .choice-text {
-    font-size: 16px;
+    font-size: 18px; /* Auswahltext-Schriftgröße auf 18px gesetzt */
   }
 
   h1 {
@@ -316,7 +311,7 @@ input::placeholder {
   }
 
   .hud-main-text {
-    font-size: 16px;
+    font-size: 18px; /* HUD-Haupttext-Schriftgröße auf 18px gesetzt */
   }
 
   #progressBar {
@@ -330,7 +325,7 @@ input::placeholder {
 
   .footer {
     padding: 2rem 5%;
-    font-size: 16px;
+    font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
   }
 
   .choice-prefix {
@@ -338,7 +333,7 @@ input::placeholder {
   }
 
   .choice-text {
-    font-size: 16px;
+    font-size: 18px; /* Auswahltext-Schriftgröße auf 18px gesetzt */
   }
 }
 
@@ -357,7 +352,7 @@ input::placeholder {
   }
 
   .hud-main-text {
-    font-size: 16px;
+    font-size: 18px; /* HUD-Haupttext-Schriftgröße auf 18px gesetzt */
   }
 
   #progressBar {
@@ -371,7 +366,7 @@ input::placeholder {
 
   .footer {
     padding: 2rem 5%;
-    font-size: 16px;
+    font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
   }
 
   .choice-prefix {
@@ -379,50 +374,35 @@ input::placeholder {
   }
 
   .choice-text {
-    font-size: 16px;
+    font-size: 18px; /* Auswahltext-Schriftgröße auf 18px gesetzt */
   }
 }
 
-@media (max-width: 425px) {
-  body {
-    overflow-x: hidden;
+@media (max-width: 435px) {
+  * {
+    font-size: 16px; /* Alle Schriftgrößen auf 16px gesetzt */
   }
 
-  .container {
-    padding: 1rem;
-  }
-
-  .content-container {
-    padding:2rem 2rem 3rem 2rem;
-  }
-  
-  .choice-container {
-    width: calc(100% - 2rem); /* Platz für Schatten lassen */
-    margin-bottom: 0.5rem;
-  }
-
-  #hud {
-    padding: 0;
+  .footer p{
+    font-size: 18px;
   }
 
   #question {
     font-size: 20px;
     padding: 0;
   }
+
   #progressBar {
     width: 13rem;
     height: 2.5rem;
     border: 0.33rem solid var(--main-color);
-    border-radius: 20px;
     background-color: #fff;
     margin: 12px 0;
   }
 
-  .footer {
-    padding: 2rem 5%;
+  .hud-prefix {
     font-size: 16px;
-  }
-
+}
   .choice-prefix {
     padding: 1rem 1.5rem;
   }
@@ -430,16 +410,19 @@ input::placeholder {
   .choice-text {
     font-size: 16px;
   }
+
+  .footer {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 320px) {
   .content-container {
-    padding:2rem 2rem 3rem 2rem;
+    padding: 2rem 2rem 3rem 2rem;
   }
 
   .choice-container {
     width: calc(100% - 1rem);
     margin-bottom: 0.5rem;
-}
-
+  }
 }

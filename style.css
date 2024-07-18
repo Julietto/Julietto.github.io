@@ -235,7 +235,7 @@ body {
     color: #fff;
     padding: 2rem 10%;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 20px;
     border-top: 0.2rem solid #000;
 }
 
@@ -251,6 +251,23 @@ body {
 
 /* Media Queries */
 @media (max-width: 425px) {
+    .home-content h3 {
+        font-size: 30px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+
+    .button {
+    font-size: 16px;
+    }
+
+    .footer {
+        font-size: 18px;
+    }
+
     .burger-menu {
         display: flex;
     }
@@ -276,5 +293,9 @@ body {
         border-bottom: 1px solid #eaeaea;
         width: 100%;
         text-align: left;
+    }
+
+    .footer {
+        font-size: 18px;
     }
 }
