@@ -7,6 +7,7 @@ body {
     margin: 0;
     background-color: #fff;
     color: #333;
+    font-size: 1.125rem;
 }
 
 .header {
@@ -17,8 +18,8 @@ body {
     background-color: #fff;
     padding: 2rem;
     text-align: center;
-    width: 90%; /* Breiter Container */
-    max-width: 800px; /* Maximale Breite */
+    width: 90%; 
+    max-width: 50rem; 
     margin-top: 8rem;
 }
 
@@ -33,18 +34,18 @@ body {
 }
 
 #badgeImage {
-    width: 250px; /* Bildgröße erhöhen */
+    width: 15.625rem;
     height: auto;
     margin-bottom: 1rem;
 }
 
 #congratulations {
-    font-size: 2rem; /* Etwas kleiner */
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 #finalScore {
-    font-size: 1.5rem; /* Etwas kleiner */
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 1rem;
 }
@@ -57,64 +58,62 @@ form {
 form input {
     width: 100%;
     padding: 1rem;
-    font-size: 1.5rem; /* Etwas kleiner */
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    border: 2px solid #000;
-    border-radius: 30px;
+    border: 0.125rem solid #000;
+    border-radius: 1.875rem;
     background-color: #fff;
     color: #333;
     text-align: center;
-    max-width: 300px; /* Maximalbreite für das Eingabefeld */
-    margin: 0 auto; /* Zentrieren */
+    max-width: 18.75rem;
+    margin: 0 auto; 
 }
 
 form button {
-    display: block; /* Block-Display für untereinander Anordnung */
-    width: 100%; /* Volle Breite */
-    font-size: 1.2rem; /* Etwas kleiner */
+    display: block; 
+    width: 100%; 
+    font-size: 1.2rem;
     padding: 1rem 2rem;
-    margin: 0.5rem auto; /* Gleicher Abstand oben und unten, automatisch zentriert */
+    margin: 0.5rem auto;
     text-decoration: none !important;
     color: #fff !important;
     background-color: #0073E6;
-    border-radius: 30px;
-    border: 2px solid #000;
+    border-radius: 1.875rem;
+    border: 0.125rem solid #000;
     text-align: center;
     transition: none;
-    max-width: 300px; /* Maximalbreite für den Button */
+    max-width: 18.75rem;
 }
 
-
 form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
     background-color: #0073E6;
     border-color: #000;
     color: #fff;
     text-decoration: none;
 }
 
-
 a.btn {
-    display: block; /* Block-Display für untereinander Anordnung */
-    width: 100%; /* Volle Breite */
-    font-size: 1.2rem; /* Etwas kleiner */
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
     padding: 1rem 2rem;
     margin: 0.5rem 0;
     text-decoration: none !important;
     color: #fff !important;
     background-color: #0073E6;
-    border-radius: 30px;
-    border: 2px solid #000;
+    border-radius: 1.875rem;
+    border: 0.125rem solid #000;
     text-align: center;
     transition: none;
-    max-width: 300px; /* Maximalbreite für den Button */
-    margin: 0 auto; /* Zentrieren */
+    max-width: 18.75rem;
+    margin: 0 auto;
 }
 
 a.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
     background-color: #0073E6;
     border-color: #000;
     color: #fff;
@@ -127,7 +126,20 @@ a.btn:hover {
     color: #fff;
     padding: 2rem 10%;
     text-align: center;
-    font-size: 1.2rem;
-    border-top: 0.2rem solid #000;
+    font-size: 1.25rem;
+    border-top: 0.125rem solid #000;
 }
 
+@media (max-width: 425px) {
+    #congratulations {
+        font-size: 1.875rem;
+    }
+
+    #finalScore {
+        font-size: 1.25rem;
+    }
+
+    .footer p {
+        font-size: 1.125rem;
+    }
+}

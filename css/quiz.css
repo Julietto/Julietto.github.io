@@ -1,11 +1,10 @@
-
 :root {
   --main-color: #0073E6;
   --secondary-color: #2b2c2e;
   --background-color: #fafafa;
   --correct-color: #28a745;
   --wrong-color: #dc3545;
-  --font-family:'Lato', Helvetica, sans-serif;;
+  --font-family: 'Lato', Helvetica, sans-serif;
 }
 
 * {
@@ -14,7 +13,7 @@
   margin: 0;
   padding: 0;
   font-weight: bold;
-  font-size: 18px; /* Standard-Schriftgröße auf 18px gesetzt */
+  font-size: 1.125rem;
 }
 
 body {
@@ -26,13 +25,13 @@ body {
 
 footer {
   flex-shrink: 0;
-  font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
+  font-size: 1.25rem;
 }
 
 #question {
   margin: 1rem 0;
   padding: 1rem 0;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .flex-column {
@@ -69,10 +68,10 @@ input {
   margin-bottom: 1rem;
   width: 20rem;
   padding: 1.5rem;
-  font-size: 18px; /* Eingabefeld-Schriftgröße auf 18px gesetzt */
+  font-size: 1.125rem;
   border: none;
   box-shadow: 0 0.1rem 1.4rem 0 var(--main-color, 0.5);
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 input::placeholder {
@@ -97,7 +96,7 @@ input::placeholder {
   width: 100%;
   border: 0.2rem solid var(--main-color, 0.5);
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 30px;
+  border-radius: 3rem;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -115,7 +114,7 @@ input::placeholder {
   padding: 1rem 1.5rem;
   background-color: var(--main-color);
   color: white;
-  border-radius: 19px 0px 0px 19px;
+  border-radius: 	3em 0 0 3em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,10 +127,8 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px; /* Auswahltext-Schriftgröße auf 18px gesetzt */
+  font-size: 1.125rem;
 }
-
-/* Aktualisierte Stile für die richtigen und falschen Antworten */
 
 .correct {
   background-color: var(--correct-color);
@@ -144,7 +141,7 @@ input::placeholder {
 
 .correct::after {
   content: "✔";
-  color: #4CAF50; /* Grünes Häkchen */
+  color: #4CAF50;
   font-size: 2.4rem;
   font-weight: bold;
   position: absolute;
@@ -164,7 +161,7 @@ input::placeholder {
 
 .incorrect::after {
   content: "✖";
-  color: #dc3545; /* Rotes Kreuz */
+  color: #dc3545;
   font-size: 2.4rem;
   font-weight: bold;
   position: absolute;
@@ -182,13 +179,13 @@ input::placeholder {
 
 .hud-prefix {
   text-align: center;
-  font-size: 18px; /* HUD-Schriftgröße auf 18px gesetzt */
+  font-size: 1.125rem;
   color: var(--main-color);
 }
 
 .hud-main-text {
   text-align: center;
-  font-size: 18px; /* HUD-Haupttext-Schriftgröße auf 18px gesetzt */
+  font-size: 1.125rem;
   color: var(--main-color);
 }
 
@@ -196,7 +193,7 @@ input::placeholder {
   width: 50rem;
   height: 2.5rem;
   border: 0.33rem solid var(--main-color);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   background-color: #fff;
   margin: 12px 0;
 }
@@ -205,7 +202,7 @@ input::placeholder {
   height: 100%;
   background-color: var(--main-color);
   width: 0%;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   transition: width 0.8s ease;
 }
 
@@ -227,7 +224,7 @@ input::placeholder {
   color: #fff;
   padding: 2rem 10%;
   text-align: center;
-  font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
+  font-size: 1.25rem;
   border-top: 0.2rem solid #000;
   width: 100%;
 }
@@ -243,7 +240,7 @@ input::placeholder {
   margin-top: 2rem;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 90rem) {
   body {
     overflow-x: hidden;
   }
@@ -253,7 +250,7 @@ input::placeholder {
   }
 
   .choice-container {
-    width: calc(100% - 2rem); /* Platz für Schatten lassen */
+    width: calc(100% - 2rem);
     margin-bottom: 0.5rem;
   }
 
@@ -267,21 +264,21 @@ input::placeholder {
   }
 
   .hud-main-text {
-    font-size: 18px; /* HUD-Haupttext-Schriftgröße auf 18px gesetzt */
+    font-size: 1.125rem;
   }
 
   #progressBar {
     width: 40rem;
     height: 2.5rem;
     border: 0.33rem solid var(--main-color);
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background-color: #fff;
     margin: 20px 0;
   }
 
   .footer {
     padding: 2rem 10%;
-    font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
+    font-size: 1.25rem;
   }
 
   .choice-prefix {
@@ -289,15 +286,15 @@ input::placeholder {
   }
 
   .choice-text {
-    font-size: 18px; /* Auswahltext-Schriftgröße auf 18px gesetzt */
+    font-size: 1.125rem;
   }
 
   h1 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 64rem) {
   body {
     overflow-x: hidden;
   }
@@ -307,26 +304,26 @@ input::placeholder {
   }
 
   .choice-container {
-    width: calc(100% - 2rem); /* Platz für Schatten lassen */
+    width: calc(100% - 2rem);
     margin-bottom: 0.5rem;
   }
 
   .hud-main-text {
-    font-size: 18px; /* HUD-Haupttext-Schriftgröße auf 18px gesetzt */
+    font-size: 1.125rem;
   }
 
   #progressBar {
     width: 32rem;
     height: 2.5rem;
     border: 0.33rem solid var(--main-color);
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background-color: #fff;
     margin: 12px 0;
   }
 
   .footer {
     padding: 2rem 5%;
-    font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
+    font-size: 1.25rem;
   }
 
   .choice-prefix {
@@ -334,11 +331,11 @@ input::placeholder {
   }
 
   .choice-text {
-    font-size: 18px; /* Auswahltext-Schriftgröße auf 18px gesetzt */
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   body {
     overflow-x: hidden;
   }
@@ -348,26 +345,26 @@ input::placeholder {
   }
 
   .choice-container {
-    width: calc(100% - 2rem); /* Platz für Schatten lassen */
+    width: calc(100% - 2rem);
     margin-bottom: 0.5rem;
   }
 
   .hud-main-text {
-    font-size: 18px; /* HUD-Haupttext-Schriftgröße auf 18px gesetzt */
+    font-size: 1.125rem;
   }
 
   #progressBar {
     width: 24rem;
     height: 2.5rem;
     border: 0.33rem solid var(--main-color);
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background-color: #fff;
     margin: 12px 0;
   }
 
   .footer {
     padding: 2rem 5%;
-    font-size: 20px; /* Footer-Schriftgröße auf 20px gesetzt */
+    font-size: 1.25rem;
   }
 
   .choice-prefix {
@@ -375,21 +372,21 @@ input::placeholder {
   }
 
   .choice-text {
-    font-size: 18px; /* Auswahltext-Schriftgröße auf 18px gesetzt */
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 435px) {
+@media (max-width: 27.1875rem) {
   * {
-    font-size: 16px; /* Alle Schriftgrößen auf 16px gesetzt */
+    font-size: 1rem;
   }
 
-  .footer p{
-    font-size: 18px;
+  .footer p {
+    font-size: 1.125rem;
   }
 
   #question {
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 0;
   }
 
@@ -402,22 +399,23 @@ input::placeholder {
   }
 
   .hud-prefix {
-    font-size: 16px;
-}
+    font-size: 1rem;
+  }
+
   .choice-prefix {
     padding: 1rem 1.5rem;
   }
 
   .choice-text {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .footer {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 20rem) {
   .content-container {
     padding: 2rem 2rem 3rem 2rem;
   }
