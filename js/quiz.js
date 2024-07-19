@@ -18,6 +18,7 @@ let questions = [];
 const correctSound = new Audio('../audio/correct.mp3');
 const wrongSound = new Audio('../audio/wrong.mp3');
 
+// Fetch questions from JSON file
 fetch("../json/fragen.json")
    .then(res => res.json())
    .then(loadedQuestions => {
@@ -28,6 +29,7 @@ fetch("../json/fragen.json")
       console.error(err);
    });
 
+// Initialize the quiz
 const startQuiz = () => {
    questionCounter = 0;
    score = 0;
@@ -37,6 +39,7 @@ const startQuiz = () => {
    loader.classList.add("hidden");
 };
 
+// Load a new question
 const getNewQuestion = () => {
    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
       localStorage.setItem("mostRecentScore", score);
@@ -47,6 +50,7 @@ const getNewQuestion = () => {
    progressText.innerText = `Frage: ${questionCounter}/${MAX_QUESTIONS}`;
    progressText.setAttribute('aria-label', `Frage: ${questionCounter} von ${MAX_QUESTIONS}`);
 
+   // Update progress bar
    const progressPercentage = (questionCounter / MAX_QUESTIONS) * 100;
    progressBarFull.style.width = `${progressPercentage}%`;
    progressBar.setAttribute('aria-valuenow', progressPercentage);
@@ -56,6 +60,7 @@ const getNewQuestion = () => {
    currentQuestion = availableQuestions[questionIndex];
    question.innerText = currentQuestion.question;
 
+   // Display choices
    choices.forEach((choice) => {
       const number = choice.dataset["number"];
       choice.innerText = currentQuestion["choice" + number];
@@ -64,6 +69,8 @@ const getNewQuestion = () => {
    availableQuestions.splice(questionIndex, 1);
    acceptingAnswers = true;
 };
+
+// Handle answer selection
 const selectAnswer = (choiceNumber) => {
    if (!acceptingAnswers) return;
    acceptingAnswers = false;
@@ -86,13 +93,14 @@ const selectAnswer = (choiceNumber) => {
    }, 1000);
 };
 
-
+// Increment score
 const incrementScore = (num) => {
    score += num;
    scoreText.innerText = score;
    scoreText.setAttribute('aria-label', `Punkte: ${score}`);
 };
 
+// Add event listeners to choices
 document.querySelectorAll('.choice-container').forEach((element, index) => {
    element.addEventListener('click', () => selectAnswer(index + 1));
    element.addEventListener('keypress', (event) => {
@@ -102,6 +110,7 @@ document.querySelectorAll('.choice-container').forEach((element, index) => {
    });
 });
 
+// Assign badges based on score
 const assignBadges = (score) => {
    let badges = [];
 
