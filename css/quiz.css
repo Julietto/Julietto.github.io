@@ -1,426 +1,431 @@
 :root {
-  --main-color: #0073E6;
-  --secondary-color: #2b2c2e;
-  --background-color: #fafafa;
-  --correct-color: #28a745;
-  --wrong-color: #dc3545;
-  --font-family: 'Lato', Helvetica, sans-serif;
+	--main-color: #0073E6;
+	--secondary-color: #2b2c2e;
+	--background-color: #fafafa;
+	--correct-color: #28a745;
+	--wrong-color: #dc3545;
+	--font-family: 'Lato', Helvetica, sans-serif;
 }
 
 * {
-  box-sizing: border-box;
-  font-family: var(--font-family);
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
+	box-sizing: border-box;
+	font-family: var(--font-family);
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
 }
 
 body {
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 footer {
-  flex-shrink: 0;
-  font-size: 1.25rem;
+	flex-shrink: 0;
+	font-size: 1.25rem;
 }
 
 #question {
-  margin: 1rem 0;
-  padding: 1rem 0;
-  font-size: 1.5rem;
+	margin: 1rem 0;
+	padding: 1rem 0;
+	font-size: 1.5rem;
 }
 
 .flex-column {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .justify-center {
-  justify-content: center;
+	justify-content: center;
 }
 
 .text-center {
-  text-align: center;
+	text-align: center;
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
 
 form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 input {
-  margin-bottom: 1rem;
-  width: 20rem;
-  padding: 1.5rem;
-  font-size: 1.125rem;
-  border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 var(--main-color, 0.5);
-  border-radius: 1.25rem;
+	margin-bottom: 1rem;
+	width: 20rem;
+	padding: 1.5rem;
+	font-size: 1.125rem;
+	border: none;
+	box-shadow: 0 0.1rem 1.4rem 0 var(--main-color, 0.5);
+	border-radius: 1.25rem;
 }
 
 input::placeholder {
-  color: #333;
-  font-weight: bold;
+	color: #333;
+	font-weight: bold;
 }
 
 .content-container {
-  background-color: #ffffff;
-  color: #333333;
-  padding-top: 5rem;
-  padding-bottom: 9rem;
-  margin-top: 8rem;
-  max-width: 90rem;
-  position: relative;
-  z-index: 2;
+	background-color: #ffffff;
+	color: #333333;
+	padding-top: 5rem;
+	padding-bottom: 9rem;
+	margin-top: 8rem;
+	max-width: 90rem;
+	position: relative;
+	z-index: 2;
 }
 
 .choice-container {
-  display: flex;
-  margin-bottom: 1rem;
-  width: 100%;
-  border: 0.2rem solid var(--main-color, 0.5);
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 3rem;
-  position: relative;
-  transition: all 0.3s ease;
+	display: flex;
+	margin-bottom: 1rem;
+	width: 100%;
+	border: 0.2rem solid var(--main-color, 0.5);
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 3rem;
+	position: relative;
+	transition: all 0.3s ease;
 }
 
 .choice-container:hover {
-  cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 var(--main-color, 0.5);
+	cursor: pointer;
+	box-shadow: 0 0.4rem 1.4rem 0 var(--main-color, 0.5);
 }
 
 .choice-container.clicked {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .choice-prefix {
-  padding: 1rem 1.5rem;
-  background-color: var(--main-color);
-  color: white;
-  border-radius: 	2.4em 0 0 2.4em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+	padding: 1rem 1.5rem;
+	background-color: var(--main-color);
+	color: white;
+	border-radius: 2.4em 0 0 2.4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
 }
 
 .choice-text {
-  padding: 1rem;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.125rem;
+	padding: 1rem;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.125rem;
 }
 
 .correct {
-  background-color: var(--correct-color);
-  color: white;
+	background-color: var(--correct-color);
+	color: white;
 }
 
 .correct .choice-text {
-  color: white;
+	color: white;
 }
 
 .correct::after {
-  content: "✔";
-  color: #4CAF50;
-  font-size: 2.4rem;
-  font-weight: bold;
-  position: absolute;
-  right: -2.5rem;
-  top: 50%;
-  transform: translateY(-50%);
+	content: "✔";
+	color: #4CAF50;
+	font-size: 2.4rem;
+	font-weight: bold;
+	position: absolute;
+	right: -2.5rem;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .incorrect {
-  background-color: var(--wrong-color);
-  color: white;
+	background-color: var(--wrong-color);
+	color: white;
 }
 
 .incorrect .choice-text {
-  color: white;
+	color: white;
 }
 
 .incorrect::after {
-  content: "✖";
-  color: #dc3545;
-  font-size: 2.4rem;
-  font-weight: bold;
-  position: absolute;
-  right: -2.5rem;
-  top: 50%;
-  transform: translateY(-50%);
+	content: "✖";
+	color: #dc3545;
+	font-size: 2.4rem;
+	font-weight: bold;
+	position: absolute;
+	right: -2.5rem;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #hud {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1rem;
 }
 
 .hud-prefix {
-  text-align: center;
-  font-size: 1.125rem;
-  color: var(--main-color);
+	text-align: center;
+	font-size: 1.125rem;
+	color: var(--main-color);
 }
 
 .hud-main-text {
-  text-align: center;
-  font-size: 1.125rem;
-  color: var(--main-color);
+	text-align: center;
+	font-size: 1.125rem;
+	color: var(--main-color);
 }
 
 #progressBar {
-  width: 50rem;
-  height: 2.5rem;
-  border: 0.33rem solid var(--main-color);
-  border-radius: 1.25rem;
-  background-color: #fff;
-  margin: 12px 0;
+	width: 50rem;
+	height: 2.5rem;
+	border: 0.33rem solid var(--main-color);
+	border-radius: 1.25rem;
+	background-color: #fff;
+	margin: 12px 0;
 }
 
 #progressBarFull {
-  height: 100%;
-  background-color: var(--main-color);
-  width: 0%;
-  border-radius: 0.75rem;
-  transition: width 0.8s ease;
+	height: 100%;
+	background-color: var(--main-color);
+	width: 0%;
+	border-radius: 0.75rem;
+	transition: width 0.8s ease;
 }
 
 #progressText {
-  text-align: left;
+	text-align: left;
 }
 
 #loader {
-  border: 1.6rem solid white;
-  border-radius: 50%;
-  border-top: 1.6rem solid var(--main-color);
-  width: 12rem;
-  height: 12rem;
-  animation: spin 1s linear infinite;
+	border: 1.6rem solid white;
+	border-radius: 50%;
+	border-top: 1.6rem solid var(--main-color);
+	width: 12rem;
+	height: 12rem;
+	animation: spin 1s linear infinite;
 }
 
 .footer {
-  background-color: #333;
-  color: #fff;
-  padding: 2rem 10%;
-  text-align: center;
-  font-size: 1.25rem;
-  border-top: 0.2rem solid #000;
-  width: 100%;
+	background-color: #333;
+	color: #fff;
+	padding: 2rem 10%;
+	text-align: center;
+	font-size: 1.25rem;
+	border-top: 0.2rem solid #000;
+	width: 100%;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 #button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
 }
 
 @media (max-width: 90rem) {
-  body {
-    overflow-x: hidden;
-  }
+	body {
+		overflow-x: hidden;
+	}
 
-  .container {
-    padding: 1rem;
-  }
+	.container {
+		padding: 1rem;
+	}
 
-  .choice-container {
-    width: calc(100% - 2rem);
-    margin-bottom: 0.5rem;
-  }
+	.choice-container {
+		width: calc(100% - 2rem);
+		margin-bottom: 0.5rem;
+	}
 
-  .content-container {
-    background-color: #ffffff;
-    color: #333333;
-    padding-top: 5rem;
-    max-width: 70rem;
-    position: relative;
-    z-index: 2;
-  }
+	.content-container {
+		background-color: #ffffff;
+		color: #333333;
+		padding-top: 5rem;
+		max-width: 70rem;
+		position: relative;
+		z-index: 2;
+	}
 
-  .hud-main-text {
-    font-size: 1.125rem;
-  }
+	.hud-main-text {
+		font-size: 1.125rem;
+	}
 
-  #progressBar {
-    width: 40rem;
-    height: 2.5rem;
-    border: 0.33rem solid var(--main-color);
-    border-radius: 1.25rem;
-    background-color: #fff;
-    margin: 20px 0;
-  }
+	#progressBar {
+		width: 40rem;
+		height: 2.5rem;
+		border: 0.33rem solid var(--main-color);
+		border-radius: 1.25rem;
+		background-color: #fff;
+		margin: 20px 0;
+	}
 
-  .footer {
-    padding: 2rem 10%;
-    font-size: 1.25rem;
-  }
+	.footer {
+		padding: 2rem 10%;
+		font-size: 1.25rem;
+	}
 
-  .choice-prefix {
-    padding: 1rem 1.5rem;
-  }
+	.choice-prefix {
+		padding: 1rem 1.5rem;
+	}
 
-  .choice-text {
-    font-size: 1.125rem;
-  }
+	.choice-text {
+		font-size: 1.125rem;
+	}
 
-  h1 {
-    font-size: 1.125rem;
-  }
+	h1 {
+		font-size: 1.125rem;
+	}
 }
 
 @media (max-width: 64rem) {
-  body {
-    overflow-x: hidden;
-  }
+	body {
+		overflow-x: hidden;
+	}
 
-  .container {
-    padding: 1rem;
-  }
+	.container {
+		padding: 1rem;
+	}
 
-  .choice-container {
-    width: calc(100% - 2rem);
-    margin-bottom: 0.5rem;
-  }
+	.choice-container {
+		width: calc(100% - 2rem);
+		margin-bottom: 0.5rem;
+	}
 
-  .hud-main-text {
-    font-size: 1.125rem;
-  }
+	.hud-main-text {
+		font-size: 1.125rem;
+	}
 
-  #progressBar {
-    width: 32rem;
-    height: 2.5rem;
-    border: 0.33rem solid var(--main-color);
-    border-radius: 1.25rem;
-    background-color: #fff;
-    margin: 12px 0;
-  }
+	#progressBar {
+		width: 32rem;
+		height: 2.5rem;
+		border: 0.33rem solid var(--main-color);
+		border-radius: 1.25rem;
+		background-color: #fff;
+		margin: 12px 0;
+	}
 
-  .footer {
-    padding: 2rem 5%;
-    font-size: 1.25rem;
-  }
+	.footer {
+		padding: 2rem 5%;
+		font-size: 1.25rem;
+	}
 
-  .choice-prefix {
-    padding: 1rem 1.5rem;
-  }
+	.choice-prefix {
+		padding: 1rem 1.5rem;
+	}
 
-  .choice-text {
-    font-size: 1.125rem;
-  }
+	.choice-text {
+		font-size: 1.125rem;
+	}
 }
 
 @media (max-width: 48rem) {
-  body {
-    overflow-x: hidden;
-  }
+	body {
+		overflow-x: hidden;
+	}
 
-  .container {
-    padding: 1rem;
-  }
+	.container {
+		padding: 1rem;
+	}
 
-  .choice-container {
-    width: calc(100% - 2rem);
-    margin-bottom: 0.5rem;
-  }
+	.choice-container {
+		width: calc(100% - 2rem);
+		margin-bottom: 0.5rem;
+	}
 
-  .hud-main-text {
-    font-size: 1.125rem;
-  }
+	.hud-main-text {
+		font-size: 1.125rem;
+	}
 
-  #progressBar {
-    width: 24rem;
-    height: 2.5rem;
-    border: 0.33rem solid var(--main-color);
-    border-radius: 1.25rem;
-    background-color: #fff;
-    margin: 12px 0;
-  }
+	#progressBar {
+		width: 24rem;
+		height: 2.5rem;
+		border: 0.33rem solid var(--main-color);
+		border-radius: 1.25rem;
+		background-color: #fff;
+		margin: 12px 0;
+	}
 
-  .footer {
-    padding: 2rem 5%;
-    font-size: 1.25rem;
-  }
+	.footer {
+		padding: 2rem 5%;
+		font-size: 1.25rem;
+	}
 
-  .choice-prefix {
-    padding: 1rem 1.5rem;
-  }
+	.choice-prefix {
+		padding: 1rem 1.5rem;
+	}
 
-  .choice-text {
-    font-size: 1.125rem;
-  }
+	.choice-text {
+		font-size: 1.125rem;
+	}
 }
 
 @media (max-width: 27.1875rem) {
-  * {
-    font-size: 1rem;
-  }
+	* {
+		font-size: 1rem;
+	}
 
-  .footer p {
-    font-size: 1.125rem;
-  }
+	.footer p {
+		font-size: 1.125rem;
+	}
 
-  #question {
-    font-size: 1.25rem;
-    padding: 0;
-  }
+	#question {
+		font-size: 1.25rem;
+		padding: 0;
+	}
 
-  #progressBar {
-    width: 13rem;
-    height: 2.5rem;
-    border: 0.33rem solid var(--main-color);
-    background-color: #fff;
-    margin: 12px 0;
-  }
+	#progressBar {
+		width: 13rem;
+		height: 2.5rem;
+		border: 0.33rem solid var(--main-color);
+		background-color: #fff;
+		margin: 12px 0;
+	}
 
-  .hud-prefix {
-    font-size: 1rem;
-  }
+	.hud-prefix {
+		font-size: 1rem;
+	}
 
-  .choice-prefix {
-    padding: 1rem 1.5rem;
-  }
+	.choice-prefix {
+		padding: 1rem 1.5rem;
+	}
 
-  .choice-text {
-    font-size: 1rem;
-  }
+	.choice-text {
+		font-size: 1rem;
+	}
 
-  .footer {
-    font-size: 1.125rem;
-  }
+	.footer {
+		font-size: 1.125rem;
+	}
 }
 
 @media (max-width: 20rem) {
-  .content-container {
-    padding: 2rem 2rem 3rem 2rem;
-  }
+	.content-container {
+		padding: 2rem 2rem 3rem 2rem;
+	}
 
-  .choice-container {
-    width: calc(100% - 1rem);
-    margin-bottom: 0.5rem;
-  }
+	.choice-container {
+		width: calc(100% - 1rem);
+		margin-bottom: 0.5rem;
+	}
 }

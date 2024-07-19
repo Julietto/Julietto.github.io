@@ -19,103 +19,101 @@ const correctSound = new Audio('../audio/correct.mp3');
 const wrongSound = new Audio('../audio/wrong.mp3');
 
 fetch("../json/fragen.json")
-    .then(res => res.json())
-    .then(loadedQuestions => {
-        questions = loadedQuestions;
-        startQuiz();
-    })
-    .catch(err => {
-        console.error(err);
-    });
+   .then(res => res.json())
+   .then(loadedQuestions => {
+      questions = loadedQuestions;
+      startQuiz();
+   })
+   .catch(err => {
+      console.error(err);
+   });
 
 const startQuiz = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    getNewQuestion();
-    game.classList.remove("hidden");
-    loader.classList.add("hidden");
+   questionCounter = 0;
+   score = 0;
+   availableQuestions = [...questions];
+   getNewQuestion();
+   game.classList.remove("hidden");
+   loader.classList.add("hidden");
 };
 
 const getNewQuestion = () => {
-    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
-        localStorage.setItem("mostRecentScore", score);
-        assignBadges(score);
-        return window.location.assign("../html/last.html");
-    }
-    questionCounter++;
-    progressText.innerText = `Frage: ${questionCounter}/${MAX_QUESTIONS}`;
-    progressText.setAttribute('aria-label', `Frage: ${questionCounter} von ${MAX_QUESTIONS}`);
+   if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+      localStorage.setItem("mostRecentScore", score);
+      assignBadges(score);
+      return window.location.assign("../html/last.html");
+   }
+   questionCounter++;
+   progressText.innerText = `Frage: ${questionCounter}/${MAX_QUESTIONS}`;
+   progressText.setAttribute('aria-label', `Frage: ${questionCounter} von ${MAX_QUESTIONS}`);
 
-    const progressPercentage = (questionCounter / MAX_QUESTIONS) * 100;
-    progressBarFull.style.width = `${progressPercentage}%`;
-    progressBar.setAttribute('aria-valuenow', progressPercentage);
-    progressBar.setAttribute('aria-valuetext', `${progressPercentage}% fertig`);
+   const progressPercentage = (questionCounter / MAX_QUESTIONS) * 100;
+   progressBarFull.style.width = `${progressPercentage}%`;
+   progressBar.setAttribute('aria-valuenow', progressPercentage);
+   progressBar.setAttribute('aria-valuetext', `${progressPercentage}% fertig`);
 
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+   currentQuestion = availableQuestions[questionIndex];
+   question.innerText = currentQuestion.question;
 
-    choices.forEach((choice) => {
-        const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number];
-        choice.parentElement.setAttribute('aria-label', `Antwort ${String.fromCharCode(64 + Number(number))}: ${currentQuestion["choice" + number]}`);
-    });
-    availableQuestions.splice(questionIndex, 1);
-    acceptingAnswers = true;
+   choices.forEach((choice) => {
+      const number = choice.dataset["number"];
+      choice.innerText = currentQuestion["choice" + number];
+      choice.parentElement.setAttribute('aria-label', `Antwort ${String.fromCharCode(64 + Number(number))}: ${currentQuestion["choice" + number]}`);
+   });
+   availableQuestions.splice(questionIndex, 1);
+   acceptingAnswers = true;
 };
 const selectAnswer = (choiceNumber) => {
-    if (!acceptingAnswers) return;
-    acceptingAnswers = false;
+   if (!acceptingAnswers) return;
+   acceptingAnswers = false;
 
-    const classToApply = choiceNumber === currentQuestion.answer ? "correct" : "incorrect";
-    const selectedChoice = document.querySelector(`.choice-container:nth-child(${choiceNumber + 2})`);
+   const classToApply = choiceNumber === currentQuestion.answer ? "correct" : "incorrect";
+   const selectedChoice = document.querySelector(`.choice-container:nth-child(${choiceNumber + 2})`);
 
-    selectedChoice.classList.add(classToApply); // Add the correct/incorrect class
+   selectedChoice.classList.add(classToApply); 
 
-    if (classToApply === "correct") {
-        incrementScore(CORRECT_BONUS);
-        correctSound.play(); // Play correct sound
-    } else {
-        wrongSound.play(); // Play wrong sound
-    }
+   if (classToApply === "correct") {
+      incrementScore(CORRECT_BONUS);
+      correctSound.play(); 
+   } else {
+      wrongSound.play();
+   }
 
-    // Remove the class after a delay
-    setTimeout(() => {
-        selectedChoice.classList.remove(classToApply);
-        getNewQuestion();
-    }, 1000);
+   setTimeout(() => {
+      selectedChoice.classList.remove(classToApply);
+      getNewQuestion();
+   }, 1000);
 };
-
 
 
 const incrementScore = (num) => {
-    score += num;
-    scoreText.innerText = score;
-    scoreText.setAttribute('aria-label', `Punkte: ${score}`);
+   score += num;
+   scoreText.innerText = score;
+   scoreText.setAttribute('aria-label', `Punkte: ${score}`);
 };
 
 document.querySelectorAll('.choice-container').forEach((element, index) => {
-    element.addEventListener('click', () => selectAnswer(index + 1));
-    element.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-            selectAnswer(index + 1);
-        }
-    });
+   element.addEventListener('click', () => selectAnswer(index + 1));
+   element.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+         selectAnswer(index + 1);
+      }
+   });
 });
 
 const assignBadges = (score) => {
-    let badges = [];
+   let badges = [];
 
-    if (score >= 1 && score <= 2) {
-        badges.push("Teilgenommen");
-    } else if (score >= 3 && score <= 5) {
-        badges.push("Bronze");
-    } else if (score >= 6 && score <= 8) {
-        badges.push("Silber");
-    } else if (score >= 9 && score <= 10) {
-        badges.push("Gold");
-    }
+   if (score >= 1 && score <= 2) {
+      badges.push("Teilgenommen");
+   } else if (score >= 3 && score <= 5) {
+      badges.push("Bronze");
+   } else if (score >= 6 && score <= 8) {
+      badges.push("Silber");
+   } else if (score >= 9 && score <= 10) {
+      badges.push("Gold");
+   }
 
-    localStorage.setItem("badges", JSON.stringify(badges));
+   localStorage.setItem("badges", JSON.stringify(badges));
 };

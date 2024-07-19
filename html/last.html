@@ -1,75 +1,69 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Herzlichen Glückwunsch!</title>
-
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="../css/last.css" />
-</head>
-<body>
-  <header class="header">
-    <a href="/index.html" class="logo" tabindex="0">Quiz</a>
-
-    <div class="burger-menu">
-        <div class="burger"></div>
-    </div>
-    
-    <nav class="navbar">
-        <a href="/html/quiz.html">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Herzlichen Glückwunsch!</title>
+      <link rel="stylesheet" href="../style.css" />
+      <link rel="stylesheet" href="../css/last.css" />
+   </head>
+   <body>
+      <header class="header">
+         <a href="/index.html" class="logo" tabindex="0">Quiz</a>
+         <div class="burger-menu">
+            <div class="burger"></div>
+         </div>
+         <nav class="navbar">
+            <a href="/html/quiz.html">
             <img src="/icons/quiz.png" alt="Quiz starten" class="nav-icon">
             <span>Zum Quiz</span>
-        </a>
-        <a href="/html/badges.html">
+            </a>
+            <a href="/html/badges.html">
             <img src="/icons/abzeichen.png" alt="Abzeichen ansehen" class="nav-icon">
             <span>Zu den Abzeichen</span>
-        </a>
-        <a href="/html/leaderboard.html">
+            </a>
+            <a href="/html/leaderboard.html">
             <img src="/icons/rangliste.png" alt="Rangliste anzeigen" class="nav-icon">
             <span>Zur Rangliste</span>
-        </a>
-    </nav>
-</header>
-
-  <main role="main" class="container">
-    <section id="end" class="flex-center flex-column">
-      <img src="" alt="Abzeichen" id="badgeImage" tabindex="0" />
-      <h1 id="congratulations" tabindex="0">Herzlichen Glückwunsch!</h1>
-      <h2 id="finalScore" tabindex="0"></h2>
-      <form aria-labelledby="congratulations" tabindex="0">
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Benutzername"
-          tabindex="0"/>
-        <button
-          type="submit"
-          class="btn"
-          id="saveScoreBtn"
-          onclick="saveHighScore(event)"
-          disabled
-          tabindex="0"
-        >
-          Ergebnis speichern
-        </button>
-      </form>
-      <a class="btn" href="../html/quiz.html" tabindex="0">Spiel nochmal</a>
-      <a class="btn" href="../index.html" tabindex="0">Zurück zur Startseite</a>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content" tabindex="0">
-      <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
-    </div>
-  </footer>
-
-  <audio id="badgeSound" src="../audio/success-fanfare-trumpets-6185.mp3" aria-hidden="true"></audio>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script src="../js/last.js"></script>
-  <script src="../js/burgermenu.js"></script>
-</body>
+            </a>
+         </nav>
+      </header>
+      <main role="main" class="container">
+         <section id="end" class="flex-center flex-column">
+            <img src="" alt="Abzeichen" id="badgeImage" tabindex="0" />
+            <h1 id="congratulations" tabindex="0">Herzlichen Glückwunsch!</h1>
+            <h2 id="finalScore" tabindex="0"></h2>
+            <form aria-labelledby="congratulations" tabindex="0">
+               <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Benutzername"
+                  tabindex="0"/>
+               <button
+                  type="submit"
+                  class="btn"
+                  id="saveScoreBtn"
+                  onclick="saveHighScore(event)"
+                  disabled
+                  tabindex="0"
+                  >
+               Ergebnis speichern
+               </button>
+            </form>
+            <a class="btn" href="../html/quiz.html" tabindex="0">Spiel nochmal</a>
+            <a class="btn" href="../index.html" tabindex="0">Zurück zur Startseite</a>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer-content" tabindex="0">
+            <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
+         </div>
+      </footer>
+      <audio id="badgeSound" src="../audio/success-fanfare-trumpets-6185.mp3" aria-hidden="true"></audio>
+      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+      <script src="../js/last.js"></script>
+      <script src="../js/burgermenu.js"></script>
+   </body>
 </html>

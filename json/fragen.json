@@ -1,82 +1,82 @@
 [
-   {
+    {
        "question": "Was ist Gamification?",
        "choice1": "Ein Videospielgenre",
        "choice2": "Die Anwendung von Spieldesign-Elementen in einem nicht-spielbezogenen Kontext",
        "choice3": "Eine Art von Computersoftware",
        "choice4": "Ein Begriff in der Musiktheorie",
        "answer": 2
-   },
-   {
+    },
+    {
        "question": "Was ist das Ziel von barrierefreien Webdesigns?",
        "choice1": "Um die Website schöner zu machen",
        "choice2": "Um die Ladezeit der Website zu erhöhen",
        "choice3": "Um die Nutzung der Website für alle Menschen unabhängig von ihren Fähigkeiten zu ermöglichen",
        "choice4": "Um die Kosten für die Website-Entwicklung zu senken",
        "answer": 3
-   },
-   {
+    },
+    {
        "question": "Welches HTML-Element wird verwendet, um Text für Screenreader hervorzuheben, aber für andere Benutzer unsichtbar zu machen?",
        "choice1": "<highlight>",
        "choice2": "<invisible>",
        "choice3": "<screenreader>",
        "choice4": "<span>",
        "answer": 4
-   },
-   {
+    },
+    {
        "question": "Was ist ein Beispiel für ein barrierefreies Gamification-Element, das in einer Webanwendung verwendet werden könnte?",
        "choice1": "Hochkontrastfarben",
        "choice2": "Kleine Schriftgrößen",
        "choice3": "Komplexe Navigationselemente",
        "choice4": "Nicht beschriftete Schaltflächen",
        "answer": 1
-   },
-   {
+    },
+    {
        "question": "Was ist ein Vorleseprogramm (Screenreader)?",
        "choice1": "Ein Programm, das Text in Brailleschrift übersetzt",
        "choice2": "Ein Programm, das Text auf dem Bildschirm in gesprochene Worte umwandelt",
        "choice3": "Ein Programm, das Bilder in Text umwandelt",
        "choice4": "Ein Programm, das Musiknoten in gesprochene Worte umwandelt",
        "answer": 2
-   },
-   {
+    },
+    {
        "question": "Was ist ARIA in Bezug auf barrierefreies Webdesign?",
        "choice1": "Ein Framework für responsive Design",
        "choice2": "Ein Tool zur Farbauswahl",
        "choice3": "Eine Reihe von Attributen, die Webinhalte und -anwendungen für Menschen mit Behinderungen zugänglicher machen",
        "choice4": "Ein Tool zur Bildoptimierung",
        "answer": 3
-   },
-   {
+    },
+    {
        "question": "Wie können Gamification-Elemente dazu beitragen, eine Website für Menschen mit visuellen Beeinträchtigungen zugänglicher zu machen?",
        "choice1": "Durch Hinzufügen von mehr visuellen Effekten und Animationen",
        "choice2": "Durch Hinzufügen von mehr Text auf der Seite",
        "choice3": "Durch die Verwendung von Audiohinweisen und haptischem Feedback",
        "choice4": "Durch die Erhöhung der Anzahl der auf der Seite angezeigten Bilder",
        "answer": 3
-   },
-   {
+    },
+    {
        "question": "Was ist ein Beispiel für ein barrierefreies Gamification-Element, das speziell für blinde Benutzer entwickelt wurde?",
        "choice1": "Ein Spiel, das vollständig auf visuellen Elementen basiert",
        "choice2": " Ein Spiel, das hauptsächlich Text enthält",
        "choice3": "Ein Spiel, das auf Audiohinweisen und haptischem Feedback basiert",
        "choice4": "Ein Spiel, das auf komplexen visuellen Rätseln basiert",
        "answer": 3
-   },
-   {
+    },
+    {
        "question": "Was ist ein wichtiges Designelement, das bei der Erstellung von barrierefreien Spielen für Menschen mit visuellen Beeinträchtigungen berücksichtigt werden sollte?",
        "choice1": "Die Verwendung von hellen und gesättigten Farben",
        "choice2": "Die Verwendung von kleinen, detaillierten Grafiken",
        "choice3": "Die Verwendung von klaren, kontrastreichen Farben und großen, erkennbaren Symbolen",
        "choice4": "Die Verwendung von komplexen visuellen Effekten und Animationen",
        "answer": 3
-   },
-   {
+    },
+    {
        "question": "Wie kann die Zugänglichkeit von Gamification-Elementen getestet werden?",
        "choice1": "Durch das Sammeln von Feedback von Benutzern ohne Behinderungen",
        "choice2": "Durch das Testen der Elemente auf verschiedenen Geräten",
        "choice3": "Durch das Sammeln von Feedback von Benutzern mit verschiedenen Arten von Behinderungen",
        "choice4": "Durch das Testen der Elemente nur auf Desktop-Computern",
        "answer": 3
-   }
-]
+    }
+ ]
