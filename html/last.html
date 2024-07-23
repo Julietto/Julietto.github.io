@@ -36,9 +36,10 @@
             <h1 id="congratulations" tabindex="0">Herzlichen Glückwunsch!</h1>
             <h2 id="finalScore" tabindex="0" aria-label="Endpunktzahl"></h2>
             <form aria-labelledby="congratulations" tabindex="0">
-                <label for="username">
-                <input type="text" name="username" id="username" placeholder="Benutzername" tabindex="0"></label>
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled tabindex="0">
+                <label for="username" tabindex="0">
+                    <input type="text" name="username" id="username" placeholder="Benutzername" tabindex="0">
+                </label>
+                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled tabindex="0" aria-label="Ergebnis speichern">
                     Ergebnis speichern
                 </button>
             </form>
@@ -46,7 +47,7 @@
             <a class="btn" href="../index.html" tabindex="0" aria-label="Zurück zur Startseite">Zurück zur Startseite</a>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content" tabindex="0">
             <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
         </div>
