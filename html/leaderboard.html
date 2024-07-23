@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="de" xml:lang="de">
+<html lang="de">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5">
         <title>Home</title>
-        <meta name="description" content="Entdecken Sie unser Quiz, das entwickelt wurde, um das Verständnis für Zugänglichkeit und spielerische Elemente im Frontend-Design zu fördern. Testen Sie Ihr Wissen, sammeln Sie Punkte und verdienen Sie Abzeichen!">
+        <meta name="description"
+           content="Entdecken Sie unser Quiz, das entwickelt wurde, um das Verständnis für Zugänglichkeit und spielerische Elemente im Frontend-Design zu fördern. Testen Sie Ihr Wissen, sammeln Sie Punkte und verdienen Sie Abzeichen!">
         <link rel="stylesheet" href="/style.css">
         <link rel="stylesheet" href="/css/leaderboard.css">
     </head>
     <body>
         <header class="header">
             <a href="/index.html" class="logo" tabindex="0" aria-label="Zur Startseite">Quiz</a>
-            <div class="burger-menu" aria-label="Navigationsmenü" tabindex="0">
-                <div class="burger" aria-hidden="true"></div>
+            <div class="burger-menu" aria-label="Navigationsmenü" tabindex="0" role="button" aria-controls="navigation" aria-expanded="false">
+                <div class="burger"></div>
             </div>
-            <nav class="navbar" aria-label="Hauptnavigation">
+            <nav class="navbar" id="navigation" aria-label="Hauptnavigation">
                 <a href="/html/quiz.html" aria-label="Quiz starten" tabindex="0">
                     <img src="/icons/quiz.png" alt="Quiz starten" class="nav-icon">
                     <span>Zum Quiz</span>
@@ -40,9 +41,9 @@
             </section>
         </main>
         <footer class="footer">
-            <address class="footer-content" tabindex="0">
+            <div class="footer-content" tabindex="0">
                 <p>&copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk</p>
-            </address>
+            </div>
         </footer>
         <script src="../js/leaderboard.js"></script>
         <script src="../js/burgermenu.js" aria-hidden="true"></script>
