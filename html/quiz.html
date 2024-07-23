@@ -36,14 +36,14 @@
             <div id="loader" role="status" aria-live="polite" aria-label="Laden"></div>
             <div id="game" class="justify-center flex-column hidden" aria-live="polite">
                 <div id="hud" aria-label="Spielstatus">
-                    <div id="hud-item">
+                    <div class="hud-item">
                         <p id="progressText" class="hud-prefix" aria-live="polite" tabindex="0">Frage 1 von 10</p>
                         <div id="progressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0% fertig" tabindex="0" aria-label="Fortschritt">
                             <div id="progressBarFull" style="width: 0%;"></div>
                         </div>
                     </div>
-                    <div id="hud-item">
-                        <p class="hud-prefix">Punkte</p>
+                    <div class="hud-item">
+                        <p class="hud-prefix" tabindex= "0">Punkte</p>
                         <h1 class="hud-main-text" id="score" aria-live="polite" tabindex="0" aria-label="Punkte: 0">0</h1>
                     </div>
                 </div>
