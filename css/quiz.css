@@ -178,13 +178,13 @@ input::placeholder {
 
 .hud-prefix {
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   color: var(--main-color);
 }
 
 .hud-main-text {
   text-align: center;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   color: var(--main-color);
 }
 
@@ -207,6 +207,7 @@ input::placeholder {
 
 #progressText {
   text-align: left;
+  font-size: 1.5rem;
 }
 
 #loader {
