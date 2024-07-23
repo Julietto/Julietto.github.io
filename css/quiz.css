@@ -264,7 +264,7 @@ input::placeholder {
   }
 
   .hud-main-text {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
   }
 
   #progressBar {
@@ -286,7 +286,7 @@ input::placeholder {
   }
 
   .choice-text {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
   }
 
   h1 {
@@ -309,7 +309,7 @@ input::placeholder {
   }
 
   .hud-main-text {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
   }
 
   #progressBar {
@@ -350,7 +350,7 @@ input::placeholder {
   }
 
   .hud-main-text {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
   }
 
   #progressBar {
@@ -381,8 +381,16 @@ input::placeholder {
     font-size: 1rem;
   }
 
+  .content-container {
+    padding: 5rem 1.5rem;
+  }
+
   .footer p {
     font-size: 1.125rem;
+  }
+
+  #hud {
+    padding: 0.5rem;
   }
 
   #question {
@@ -399,9 +407,12 @@ input::placeholder {
   }
 
   .hud-prefix {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
+  .hud-main-text {
+    font-size: 1.3rem;
+  }
   .choice-prefix {
     padding: 1rem 1.5rem;
   }
@@ -410,6 +421,9 @@ input::placeholder {
     font-size: 1rem;
   }
 
+  #progressText {
+    font-size: 1.3rem;
+}
   .footer {
     font-size: 1.125rem;
   }
