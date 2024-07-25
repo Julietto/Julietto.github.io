@@ -134,6 +134,7 @@ body {
     background-position: center;
     position: relative;
     overflow: hidden;
+    font-weight: bold;
 }
 
 .main::before {
