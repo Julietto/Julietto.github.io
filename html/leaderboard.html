@@ -8,30 +8,34 @@
     <meta name="description"
         content="Entdecken Sie unser Quiz, das entwickelt wurde, um das Verständnis für Zugänglichkeit und spielerische Elemente im Frontend-Design zu fördern. Testen Sie Ihr Wissen, sammeln Sie Punkte und verdienen Sie Abzeichen!">
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/css/leaderboard.css">
+    <link rel="stylesheet" href="/css/leaderboard.css"> 
 </head>
 <body>
-   <header class="header">
-      <a href="/index.html" class="logo" aria-label="Logo" accesskey="h">Quiz</a>
-      <div class="burger-menu" aria-label="Navigationsmenü" role="button" aria-controls="navigation" aria-expanded="false">
-          <div class="burger"></div>
-      </div>
-      <nav class="navbar" id="navigation" aria-label="Hauptnavigation">
-          <a href="/html/quiz.html" aria-label="Zum Quiz" accesskey="q">
-              <img src="/icons/quiz.png" alt="Quiz Icon" class="nav-icon">
-              <span>Zum Quiz</span>
-          </a>
-          <a href="/html/badges.html" aria-label="Zu den Abzeichen" accesskey="b">
-              <img src="/icons/abzeichen.png" alt="Abzeichen Icon" class="nav-icon">
-              <span>Zu den Abzeichen</span>
-          </a>
-          <a href="/html/leaderboard.html" aria-label="Zur Rangliste" accesskey="l">
-              <img src="/icons/rangliste.png" alt="Rangliste Icon" class="nav-icon">
-              <span>Zur Rangliste</span>
-          </a>
-      </nav>
-  </header>
-    <main class="main">
+    <a href="#main-content" class="skip-link" accesskey="m">Zum Hauptinhalt springen</a>
+    <a href="#navigation" class="skip-link" accesskey="n">Zur Navigation springen</a>
+    
+    <header class="header">
+        <a href="/index.html" class="logo" aria-label="Logo" accesskey="h">Quiz</a>
+        <div class="burger-menu" aria-label="Navigationsmenü" role="button" aria-controls="navigation" aria-expanded="false">
+            <div class="burger"></div>
+        </div>
+        <nav class="navbar" id="navigation" aria-label="Hauptnavigation">
+            <a href="/html/quiz.html" aria-label="Zum Quiz" accesskey="q">
+                <img src="/icons/quiz.png" alt="Quiz Icon" class="nav-icon">
+                <span>Zum Quiz</span>
+            </a>
+            <a href="/html/badges.html" aria-label="Zu den Abzeichen" accesskey="b">
+                <img src="/icons/abzeichen.png" alt="Abzeichen Icon" class="nav-icon">
+                <span>Zu den Abzeichen</span>
+            </a>
+            <a href="/html/leaderboard.html" aria-label="Zur Rangliste" accesskey="l">
+                <img src="/icons/rangliste.png" alt="Rangliste Icon" class="nav-icon">
+                <span>Zur Rangliste</span>
+            </a>
+        </nav>
+    </header>
+    
+    <main id="main-content" class="main">
         <section class="content-container">
             <h1 class="h1" tabindex="0">Rangliste</h1>
             <p class="p" tabindex="0">Diese Rangliste präsentiert die zehn führenden Spieler, sortiert nach der Gesamtzahl der in Quizspielen erzielten Punkte. Jede korrekt beantwortete Frage erhöht die Gesamtpunktzahl des Spielers. Am Ende eines jeden Quizspiels haben die Spieler die Möglichkeit, ihre erreichte Punktzahl in die Rangliste einzutragen.</p>
@@ -40,11 +44,13 @@
             </article>
         </section>
     </main>
+    
     <footer class="footer" role="contentinfo">
         <address class="footer-content" tabindex="0">
             &copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk
         </address>
     </footer>
+    
     <script src="../js/leaderboard.js"></script>
     <script src="../js/burgermenu.js"></script>
 </body>

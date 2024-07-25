@@ -10,27 +10,31 @@
     <link rel="stylesheet" href="/css/last.css">
 </head>
 <body>
-   <header class="header">
-      <a href="/index.html" class="logo" aria-label="Logo" accesskey="h">Quiz</a>
-      <div class="burger-menu" aria-label="Navigationsmenü" role="button" aria-controls="navigation" aria-expanded="false">
-          <div class="burger"></div>
-      </div>
-      <nav class="navbar" id="navigation" aria-label="Hauptnavigation">
-          <a href="/html/quiz.html" aria-label="Zum Quiz" accesskey="q">
-              <img src="/icons/quiz.png" alt="Quiz Icon" class="nav-icon">
-              <span>Zum Quiz</span>
-          </a>
-          <a href="/html/badges.html" aria-label="Zu den Abzeichen" accesskey="b">
-              <img src="/icons/abzeichen.png" alt="Abzeichen Icon" class="nav-icon">
-              <span>Zu den Abzeichen</span>
-          </a>
-          <a href="/html/leaderboard.html" aria-label="Zur Rangliste" accesskey="l">
-              <img src="/icons/rangliste.png" alt="Rangliste Icon" class="nav-icon">
-              <span>Zur Rangliste</span>
-          </a>
-      </nav>
-  </header>
-    <main role="main" class="container">
+    <a href="#main-content" class="skip-link" accesskey="m">Zum Hauptinhalt springen</a>
+    <a href="#navigation" class="skip-link" accesskey="n">Zur Navigation springen</a>
+    
+    <header class="header">
+        <a href="/index.html" class="logo" aria-label="Logo" accesskey="h">Quiz</a>
+        <div class="burger-menu" aria-label="Navigationsmenü" role="button" aria-controls="navigation" aria-expanded="false">
+            <div class="burger"></div>
+        </div>
+        <nav class="navbar" id="navigation" aria-label="Hauptnavigation">
+            <a href="/html/quiz.html" aria-label="Zum Quiz" accesskey="q">
+                <img src="/icons/quiz.png" alt="Quiz Icon" class="nav-icon">
+                <span>Zum Quiz</span>
+            </a>
+            <a href="/html/badges.html" aria-label="Zu den Abzeichen" accesskey="b">
+                <img src="/icons/abzeichen.png" alt="Abzeichen Icon" class="nav-icon">
+                <span>Zu den Abzeichen</span>
+            </a>
+            <a href="/html/leaderboard.html" aria-label="Zur Rangliste" accesskey="l">
+                <img src="/icons/rangliste.png" alt="Rangliste Icon" class="nav-icon">
+                <span>Zur Rangliste</span>
+            </a>
+        </nav>
+    </header>
+    
+    <main id="main-content" role="main" class="container">
         <section id="end" class="flex-center flex-column">
             <img src="" alt="Abzeichen" id="badgeImage" tabindex="0" aria-label="Erhaltenes Abzeichen">
             <h1 id="congratulations" tabindex="0">Herzlichen Glückwunsch!</h1>
@@ -47,11 +51,13 @@
             <a class="btn" href="../index.html" tabindex="0" aria-label="Zurück zur Startseite">Zurück zur Startseite</a>
         </section>
     </main>
+    
     <footer class="footer" role="contentinfo">
         <address class="footer-content" tabindex="0">
             &copy; 2024 Quiz | Konzept für Barrierefreiheit in Gamification von Julia Bonk
         </address>
     </footer>
+    
     <audio id="badgeSound" src="../audio/success-fanfare-trumpets-6185.mp3" aria-hidden="true"></audio>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="../js/last.js"></script>
